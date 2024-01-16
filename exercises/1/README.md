@@ -127,7 +127,7 @@ the program with a set of arguments.  There is no program state to speak of
 before running the test.  Then, what things should you put as preconditions?
 There are plenty!  For a Java program, it is always important which Java
 Runtime Environment (JRE) the program runs in.  You could say something like:
-When "java -version" is run, the system outputs "java version "1.8.0_231".
+When "java -version" is run, the system outputs "java version "11.0.21".
 Companies would actually perform multiple tests on the same program using the
 same arguments for multiple versions of Java that their clients use, and each
 would be a separate test case!
@@ -200,7 +200,9 @@ bug even if you reproduce the steps if you start from a different precondition! 
 
 ```
 REPRODUCTION STEPS:
-   Preconditions: "java -version" shows java version "1.8.0_231".
+   Preconditions:
+   - "java -version" shows java version "11.0.21".
+   - GoatGoatCar.jar file is in the current directory.
    Steps:
    1. ...
    2. ...
