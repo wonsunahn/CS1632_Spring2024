@@ -14,7 +14,7 @@
 # CS 1632 - Software Quality Assurance
 Spring Semester 2024 - Exercise 1
 
-* DUE: January 15 (Sunday), 2024 11:59 PM
+* DUE: January 21 (Sunday), 2024 11:59 PM
 
 **GitHub Classroom Link:** https://classroom.github.com/a/ca4Vo1H6
 
