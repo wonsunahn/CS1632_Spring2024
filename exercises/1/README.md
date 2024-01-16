@@ -29,10 +29,11 @@ create a new one.
 For this exercise, you and your partner will determine a **test plan** for the
 simple simulator GoatGoatCar, based on the requirements listed.
 
-* There should be at least **6 test cases** altogether.
+* There should be at least **5 test cases** for the 5 requirements.
 * Test cases should have unambiguous preconditions, execution steps, and
   postconditions.  Remember, a test case should be **reproducible** no matter
 who is doing the testing and should be executable **independent** of one other.
+* There should be at least one base case, one edge case, and one corner case in the mix of test cases.
 * The test plan should include a **traceability matrix** showing the
   mapping of test cases to requirements.  The traceability matrix should
 **cover all requirements** for good test coverage.
