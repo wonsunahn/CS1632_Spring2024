@@ -4,7 +4,8 @@
   * [Creating a Test Plan](#creating-a-test-plan)
   * [Creating a Traceability Matrix](#creating-a-traceability-matrix)
   * [Reporting Defects](#reporting-defects)
-  * [Test Plan / Defect Reporting Tips](#test-plan--defect-reporting-tips)
+    + [Components of a Defect Report](#components-of-a-defect-report)
+    + [GitHub Bug Tracking System](#github-bug-tracking-system)
   * [Format](#format)
   * [Submission](#submission)
   * [Groupwork Plan](#groupwork-plan)
@@ -15,7 +16,7 @@ Spring Semester 2024 - Exercise 1
 
 * DUE: January 15 (Sunday), 2024 11:59 PM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/ca4Vo1H6
 
 This is going to be your first group assignment.  When you click on the GitHub
 Classroom link, you will be asked to either create a new team or join an
