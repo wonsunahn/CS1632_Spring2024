@@ -213,7 +213,7 @@ Traceability Matrix, 3. Test Cases, and 4. Defects.
 
 Each pairwise group will do a shared submission to the **Deliverable 1**
 GradeScope link in the manner described on Exercise 1.  Make sure that your
-partner is added, or he/she will not get a grade!
+partner is added, or he/she/they will not get a grade!
 
 ## Groupwork Plan
 
