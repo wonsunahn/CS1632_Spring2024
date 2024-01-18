@@ -30,7 +30,7 @@ perform the name change and greet the cat with the new name.  If the cat with
 the ID is rented out, the system shall inform the user that the cat is not here
 and not perform the name change.
 
-FUN-5-QUIT-COMMAND - Upon the user entering command "4" on the prompt, the
+FUN-5-QUIT-COMMAND - Upon the user entering command "5" on the prompt, the
 system shall inform the user that it is closing up shop and then shut down.
 
 FUN-INVALID-CAT-ID - If the user, when prompted for a cat ID, enters a string
