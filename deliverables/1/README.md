@@ -189,7 +189,7 @@ format -
 	POSTCONDITIONS:
 
 ON A NEW PAGE, copy and paste the link to your GitHub repository issues page
-with the 3 open issues.
+with the 3 closed issues.
 
 ## Grading
 
