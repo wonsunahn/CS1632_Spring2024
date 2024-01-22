@@ -72,12 +72,12 @@ the deliverables.
   * Teams participation
 
 TopHat questions will be asked in class on days where there are lectures
-assigned as Prerequisites on the [Schedule](schedule.md), on Monday at the
+assigned as Prerequisites on the [Schedule](schedule.md), on Tuesday at the
 beginning of each week.  You are expected to have listened to the lectures
-before coming t class.  You will be given one minute to answer each question.
+before coming to class on Canvas Panopto.  You will be given one minute to answer each question.
 0.5 points are participation points and 0.5 points are correctness points for
-each 1 point per question.  Sometimes, I will assign TopHat questions that we
-don't have time to cover in class as homework. 
+each 1 point per question.  I will also assign TopHat questions that we
+don't have time to cover in class as homework you have to do before coming to class. 
 
 Exams will NOT be allowed to be made up except with a valid and verified excuse
 (generally medical - others are left to the discretion of the instructor).

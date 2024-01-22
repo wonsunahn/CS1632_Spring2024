@@ -1,0 +1,50 @@
+Grading Rubric for D1
+
+* Introduction: 20% of grade
+
+Division of work listed:                           ____ / 5
+
+One base case clearly described:                   ____ / 5
+
+One edge case clearly described:                   ____ / 5
+
+One corner case clearly described:                 ____ / 5
+
+* Test Plan: 30% of grade
+
+Preconditions include all state
+needed for reproducibility:                        ____ / 5
+
+Execution steps are numbered and
+clearly delineated:                                ____ / 5
+
+Postconditions result in no
+false positive defects:                            ____ / 5
+
+Postconditions describe expected behavior
+given the context and not merely requirements:     ____ / 5
+
+Test cases check all behaviors
+(equivalence classes):                             ____ / 10
+
+* Traceability Matrix: 20% of grade
+
+>= 1 Test case per requirement:                    ____ / 10
+
+Test case postconditions check given requirements: ____ / 10
+
+* Defects Found and Described: 30% of grade
+
+Must be >= 3 defects! 10% off for each missing one.
+
+Defects are Reproducible:                          ____ / 10
+(-5 if preconditions missing)
+
+Observed behavior shows program
+behavior verbatim to help debugging:               ____ / 10
+
+Defects properly routed through GitHub issues:     ____ / 10
+
+***
+
+Total:                                             ____ / 100
