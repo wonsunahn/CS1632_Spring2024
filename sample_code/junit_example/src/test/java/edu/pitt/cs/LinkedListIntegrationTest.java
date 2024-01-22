@@ -1,10 +1,11 @@
+package edu.pitt.cs;
 import static org.junit.Assert.*;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class LinkedListTest {
+public class LinkedListIntegrationTest {
 
 	LinkedList<Integer> ll;
 	Node<Integer>[] nodes;
@@ -17,7 +18,7 @@ public class LinkedListTest {
 		// Create a bunch Nodes that will be used to test LinkedList
 		nodes = new Node[10];
 		for (int j = 0; j < 10; j++) {
-			nodes[j] = new Node<Integer>(new Integer(j));
+			nodes[j] = new Node<Integer>(Integer.valueOf(j));
 		}
 	}
 
@@ -70,14 +71,13 @@ public class LinkedListTest {
 	// called to the last of the first ten nodes, and that the added
 	// node testNode is the same as the one that is at the front of the list.
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testAddToTenItemLL() {
 		for (int j = 0; j < 10; j++) {
 			ll.addToFront(nodes[j]);
 		}
 		
-		Node<Integer> testNode = new Node<Integer>(new Integer(1));
+		Node<Integer> testNode = new Node<Integer>(Integer.valueOf(1));
 		ll.addToFront(testNode);
 		assertSame(ll.getFront(), testNode);
 		
@@ -87,7 +87,6 @@ public class LinkedListTest {
 	// called to the original node and that the added
 	// node testNode is the same as the one that is at the front of the list.
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testAddToOneItemLL() {
 		Node<Integer> existingNode = nodes[1];
@@ -125,7 +124,6 @@ public class LinkedListTest {
 	// one elements will not throw an error, and will result in an
 	// empty LinkedList (front is null).
 	
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testDeleteFrontOneItem() {
 		ll.addToFront(nodes[1]);
@@ -137,7 +135,6 @@ public class LinkedListTest {
 	// multiple elements will properly delete the first node
 	// and leave the old second node as the new first node..	
 	
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testDeleteFrontMultipleItems() {
 		for (int j = 0; j < 10; j++) {
@@ -188,8 +185,8 @@ public class LinkedListTest {
 	public void testEqualsOneNodeSameVals() {
 		LinkedList<Integer> ll11 = new LinkedList<Integer>();
 		LinkedList<Integer> ll12 = new LinkedList<Integer>();
-		ll11.addToFront(new Node<Integer>(new Integer(1)));
-		ll12.addToFront(new Node<Integer>(new Integer(1)));
+		ll11.addToFront(new Node<Integer>(Integer.valueOf(1)));
+		ll12.addToFront(new Node<Integer>(Integer.valueOf(1)));
 		assertEquals(ll11, ll12);
 	}
 	
@@ -198,8 +195,8 @@ public class LinkedListTest {
 	public void testEqualsOneNodeDiffVals() {
 		LinkedList<Integer> ll11 = new LinkedList<Integer>();
 		LinkedList<Integer> ll2 = new LinkedList<Integer>();
-		ll11.addToFront(new Node<Integer>(new Integer(1)));
-		ll2.addToFront(new Node<Integer>(new Integer(2)));
+		ll11.addToFront(new Node<Integer>(Integer.valueOf(1)));
+		ll2.addToFront(new Node<Integer>(Integer.valueOf(2)));
 		assertFalse(ll11.equals(ll2));
 	}
 	
@@ -210,10 +207,10 @@ public class LinkedListTest {
 		LinkedList<Integer> ll11 = new LinkedList<Integer>();
 		LinkedList<Integer> ll_3elems = new LinkedList<Integer>();
 		
-		ll11.addToFront(new Node<Integer>(new Integer(1)));
-		ll_3elems.addToFront(new Node<Integer>(new Integer(3)));
-		ll_3elems.addToFront(new Node<Integer>(new Integer(2)));
-		ll_3elems.addToFront(new Node<Integer>(new Integer(1)));
+		ll11.addToFront(new Node<Integer>(Integer.valueOf(1)));
+		ll_3elems.addToFront(new Node<Integer>(Integer.valueOf(3)));
+		ll_3elems.addToFront(new Node<Integer>(Integer.valueOf(2)));
+		ll_3elems.addToFront(new Node<Integer>(Integer.valueOf(1)));
 		
 		assertFalse(ll_3elems.equals(ll11));
 	}
@@ -223,7 +220,7 @@ public class LinkedListTest {
 	@Test
 	public void testEqualsRef() {
 		LinkedList<Integer> ll11 = new LinkedList<Integer>();
-		ll11.addToFront(new Node<Integer>(new Integer(1)));
+		ll11.addToFront(new Node<Integer>(Integer.valueOf(1)));
 		LinkedList<Integer> ll11_new = ll11;
 		assertSame(ll11, ll11_new);
 	}
@@ -234,13 +231,13 @@ public class LinkedListTest {
 	public void testNotEqualsDiffData() {
 		LinkedList<Integer> ll_3elems = new LinkedList<Integer>();
 		LinkedList<Integer> ll_321 = new LinkedList<Integer>();
-		ll_3elems.addToFront(new Node<Integer>(new Integer(3)));
-		ll_3elems.addToFront(new Node<Integer>(new Integer(2)));
-		ll_3elems.addToFront(new Node<Integer>(new Integer(1)));
+		ll_3elems.addToFront(new Node<Integer>(Integer.valueOf(3)));
+		ll_3elems.addToFront(new Node<Integer>(Integer.valueOf(2)));
+		ll_3elems.addToFront(new Node<Integer>(Integer.valueOf(1)));
 		
-		ll_321.addToFront(new Node<Integer>(new Integer(1)));
-		ll_321.addToFront(new Node<Integer>(new Integer(2)));
-		ll_321.addToFront(new Node<Integer>(new Integer(3)));
+		ll_321.addToFront(new Node<Integer>(Integer.valueOf(1)));
+		ll_321.addToFront(new Node<Integer>(Integer.valueOf(2)));
+		ll_321.addToFront(new Node<Integer>(Integer.valueOf(3)));
 		assertFalse(ll_321.equals(ll_3elems));
 	}
 	
@@ -250,13 +247,13 @@ public class LinkedListTest {
 		LinkedList<Integer> ll_321 = new LinkedList<Integer>();
 		LinkedList<Integer> ll_321_2 = new LinkedList<Integer>();
 		
-		ll_321.addToFront(new Node<Integer>(new Integer(1)));
-		ll_321.addToFront(new Node<Integer>(new Integer(2)));
-		ll_321.addToFront(new Node<Integer>(new Integer(3)));
+		ll_321.addToFront(new Node<Integer>(Integer.valueOf(1)));
+		ll_321.addToFront(new Node<Integer>(Integer.valueOf(2)));
+		ll_321.addToFront(new Node<Integer>(Integer.valueOf(3)));
 		
-		ll_321_2.addToFront(new Node<Integer>(new Integer(1)));
-		ll_321_2.addToFront(new Node<Integer>(new Integer(2)));
-		ll_321_2.addToFront(new Node<Integer>(new Integer(3)));
+		ll_321_2.addToFront(new Node<Integer>(Integer.valueOf(1)));
+		ll_321_2.addToFront(new Node<Integer>(Integer.valueOf(2)));
+		ll_321_2.addToFront(new Node<Integer>(Integer.valueOf(3)));
 		
 		assertTrue(ll_321.equals(ll_321_2));
 	

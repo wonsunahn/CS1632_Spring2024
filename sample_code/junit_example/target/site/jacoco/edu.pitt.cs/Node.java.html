@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Node.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">junit-example</a> &gt; <a href="index.source.html" class="el_package">edu.pitt.cs</a> &gt; <span class="el_source">Node.java</span></div><h1>Node.java</h1><pre class="source lang-java linenums">package edu.pitt.cs;
+public class Node&lt;T&gt; {
+
+<span class="fc" id="L4">    private Node&lt;T&gt; _nextNode = null;</span>
+<span class="fc" id="L5">    private T _data = null;</span>
+	
+<span class="fc" id="L7">    public Node(T data) {</span>
+<span class="fc" id="L8">	_data = data;</span>
+<span class="fc" id="L9">    }</span>
+	
+    public void setData(T data) {
+<span class="nc" id="L12">	_data = data;</span>
+<span class="nc" id="L13">    }</span>
+	
+    public T getData() {
+<span class="fc" id="L16">	return _data;</span>
+    }
+	
+    public Node&lt;T&gt; getNext() {
+<span class="fc" id="L20">	return _nextNode;</span>
+    }
+	
+    public void setNext(Node&lt;T&gt; newNext) {
+<span class="fc" id="L24">	_nextNode = newNext;</span>
+<span class="fc" id="L25">    }</span>
+	
+    public String toString() {
+<span class="nc bnc" id="L28" title="All 2 branches missed.">	if (_nextNode != null) {</span>
+<span class="nc" id="L29">	    return &quot;(&quot; + _data + &quot;, &quot; + _nextNode.hashCode() + &quot;)&quot;;</span>
+	} else {
+<span class="nc" id="L31">	    return &quot;(&quot; + _data + &quot;, &quot; + null + &quot;)&quot;;</span>
+	}
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

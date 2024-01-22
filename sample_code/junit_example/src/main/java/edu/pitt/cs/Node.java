@@ -1,3 +1,4 @@
+package edu.pitt.cs;
 public class Node<T> {
 
     private Node<T> _nextNode = null;
