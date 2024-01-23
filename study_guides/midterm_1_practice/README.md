@@ -123,9 +123,9 @@ This will create a folder my-app and under it, you will see a pom.xml file
 and an src/ folder with some sample code under it.  Please edit the pom.xml
 file in the following way.
 
-1. Replace 1.7 with 1.8 for the maven.compiler.source and
+1. Replace 1.7 with 11 for the maven.compiler.source and
    maven.compiler.target properties near the top.  This will instruct Maven
-to use verion 1.8 of the Java compiler.
+to use verion 11 of the Java compiler.
 
 1. Replace the dependencies section (which currently contains only JUnit
    4.11) with the following block:
@@ -149,14 +149,14 @@ to use verion 1.8 of the Java compiler.
            <dependency>
                    <groupId>junit</groupId>
                    <artifactId>junit</artifactId>
-                   <version>4.13</version>
+                   <version>4.13.2</version>
                    <scope>test</scope>
            </dependency>
 
            <dependency>
                    <groupId>org.mockito</groupId>
-                   <artifactId>mockito-all</artifactId>
-                   <version>1.10.19</version>
+                   <artifactId>mockito-core</artifactId>
+                   <version>5.7.0</version>
            </dependency>
    </dependencies>
    ```
