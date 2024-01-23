@@ -1,13 +1,14 @@
 package edu.pitt.cs;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.FixMethodOrder;
 import org.junit.runners.MethodSorters;
-import org.mockito.*;
+import static org.junit.Assert.*;
+
+import org.mockito.Mockito;
+import static org.mockito.Mockito.*;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class CatUnitTest {

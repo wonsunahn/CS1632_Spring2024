@@ -1,6 +1,7 @@
 package edu.pitt.cs;
 
-import org.mockito.*;
+import org.mockito.Mockito;
+import static org.mockito.Mockito.*; 
 
 public interface Cat {
 	public static Cat createInstance(InstanceType type, int id, String name) {
