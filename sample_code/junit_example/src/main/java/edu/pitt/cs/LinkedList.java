@@ -1,3 +1,4 @@
+package edu.pitt.cs;
 import java.util.ArrayList;
 
 public class LinkedList<T> {
@@ -230,10 +231,10 @@ public class LinkedList<T> {
 		
 		if (this == rhs) return true;
 		else if (!(rhs instanceof LinkedList) || rhs == null) return false;
-		LinkedList other = (LinkedList) rhs;
+		LinkedList<T> other = (LinkedList<T>) rhs;
 		boolean toReturn = true;
-		Node ptr1 = this.getFront();
-		Node ptr2 = other.getFront();
+		Node<T> ptr1 = this.getFront();
+		Node<T> ptr2 = other.getFront();
 		boolean cont = true;
 		while (ptr1 != null && ptr2 != null && cont == true) {
 			// System.out.println("Ptr1 = " + ptr1.getData() + " / ptr2 = " + ptr2.getData());

@@ -1,3 +1,4 @@
+package edu.pitt.cs;
 import static org.junit.Assert.*;
 
 import org.junit.After;
@@ -102,7 +103,6 @@ public class LinkedListUnitTest {
 	// called to the original node and that the added
 	// node testNode is the same as the one that is at the front of the list.
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testAddToOneItemLL() {
 		Node<Integer> existingNode = nodes[1];
@@ -142,7 +142,6 @@ public class LinkedListUnitTest {
 	// one elements will not throw an error, and will result in an
 	// empty LinkedList (front is null).
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testDeleteFrontOneItem() {
 		ll.addToFront(nodes[1]);
@@ -154,7 +153,6 @@ public class LinkedListUnitTest {
 	// multiple elements will properly delete the first node
 	// and leave the old second node as the new first node..
 
-	@SuppressWarnings("unchecked")
 	@Test
 	public void testDeleteFrontMultipleItems() {
 		for (int j = 0; j < 10; j++) {
