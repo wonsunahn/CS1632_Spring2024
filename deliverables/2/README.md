@@ -318,12 +318,7 @@ difficulties you faced while using JUnit.  On the second page, paste a
 screenshot of code coverage stats **after** having completed the coding.
 Please refer to [Exercise 2](/exercises/2#measuring-code-coverage) on how to
 create the screenshot.  Submit to GradeScope at the **Deliverable 2 Coverage**
-link.  Your screenshot should look like this:
-
-   <img alt="Code Coverage Jacoco" src=code_coverage_jacoco.png>
-
-   Make sure that the coverage of CoffeeMakerQuestImpl is showing and the
-overall coverage is above **90%** as shown above.
+link.  
 
 # GradeScope Feedback
 
