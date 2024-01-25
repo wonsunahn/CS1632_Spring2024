@@ -21,7 +21,7 @@ Spring Semester 2024
 
 * DUE: February 13, 2024 before start of class
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/UEy8eUyF
 
 ## Description
 
