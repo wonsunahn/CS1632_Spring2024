@@ -65,4 +65,6 @@ public class RoomUnitTest {
 		// TODO: Fill in	
 	}
 
+	// TODO: Put in more unit tests of your own making if you need to improve coverage!
+	
 }

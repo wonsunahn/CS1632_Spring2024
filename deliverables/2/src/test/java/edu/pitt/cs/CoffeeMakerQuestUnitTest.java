@@ -226,6 +226,6 @@ public class CoffeeMakerQuestUnitTest {
 		// TODO: Fill in
 	}
 
-	// TODO: Put in more unit tests of your own making to improve coverage!
+	// TODO: Put in more unit tests of your own making if you need to improve coverage!
 
 }
