@@ -113,17 +113,7 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 
 ## WEEK 14 (Week of 8 APR)
 
-* April 11, 1:00PM – 2:15PM: [NetApp](https://www.netapp.com/) guest lecture
-  * Submit your resumes [HERE](https://pitt.co1.qualtrics.com/jfe/form/SV_eRn59TbEy46D7oO)!
-
-* April 11, 4:00PM - 5:15PM: [Deloitte](https://www.deloitte.com/) guest lecture
-  * Submit your resumes [HERE](https://pitt.co1.qualtrics.com/jfe/form/SV_0lBY1Xzs0OSoBlY)!
-
-* April 13, 1:00PM – 2:15PM: [SIG (Susquehanna International Group)](https://sig.com/) guest lecture
-  * Submit your resumes [HERE](https://pitt.co1.qualtrics.com/jfe/form/SV_6DaB1iknEVtc65E)!
-
-* April 13, 4:00PM - 5:15PM: [Aerotech](https://www.aerotech.com/) guest lecture
-  * Submit your resumes [HERE](https://pitt.co1.qualtrics.com/jfe/form/SV_4Vfnh540dCT1qZM)!
+* Industry Guest Speakers (TBD)
 
 ## WEEK 15 (Week of 15 APR)
 
