@@ -131,7 +131,8 @@ You can invoke the Maven 'test' phase as follows:
    ```
 
 You will notice that the build fails at this point due to Jacoco, because this
-time a coverage threshold of 90% is set for the CoffeeMakerQuestImpl class.
+time a coverage threshold of 90% is set for the CoffeeMakerQuestImpl,
+PlayerImpl and RoomImpl classes.
 
 ## Software Developement Life Cycle using Test Driven Development
 
@@ -225,10 +226,10 @@ between brackets [].  GradeScope itself uses JUnit assertEquals behind the
 scenes to test your program and showing the difference in brackets is a JUnit
 assertEquals feature.
 
-* Code coverage of the class CoffeeMakerQuestImpl when the JUnit TestRunner is
-  run should be at an absolute minimum of **90%**.  If coverage falls below
-that number, add more unit tests to CoffeeMakerQuestUnitTest.  View the detailed
-line-by-line Jacoco coverage report for CoffeeMakerQuestImpl to see which lines
+* Code coverage of the class CoffeeMakerQuestImpl, PlayerImpl, and RoomImpl
+  classes must be at a minimum of **90%**.  If coverage falls below that
+number, add more unit tests to the respective unit test classes.  View the
+detailed line-by-line Jacoco coverage report for each method to see which lines
 you are missing and come up with test cases that are able to hit those lines.
 
 * When you generate or test strings in your code and multiple lines are
