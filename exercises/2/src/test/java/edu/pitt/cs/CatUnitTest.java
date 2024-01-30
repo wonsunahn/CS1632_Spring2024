@@ -61,7 +61,7 @@ public class CatUnitTest {
 	 * <pre>
 	 * Preconditions: c has been created with ID 1, and name "Jennyanydots".
 	 * Execution steps: Call c.getName().
-	 * Postconditions: Return value is 1.
+	 * Postconditions: Return value is "Jennyanydots".
 	 * </pre>
 	 */
 	@Test
