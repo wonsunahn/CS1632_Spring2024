@@ -198,8 +198,7 @@ public class CoffeeMakerQuestUnitTest {
 	 * Execution steps: Call cmq.processCommand("D").
 	 *                  Call cmq.isGameOver().
 	 * Postconditions: Return value of cmq.processCommand("D") is: "YOU HAVE NO COFFEE!" + newline + "YOU HAVE NO CREAM!" + newline + 
-	 *                    "YOU HAVE NO SUGAR!" + newline + newline + "You drink the air, as you have no coffee, sugar, or cream." + newline + 
-	 *                    "The air is invigorating, but not invigorating enough. You cannot study." + newline + "You lose!" + newline.
+	 *                    "YOU HAVE NO SUGAR!" + newline + newline + "You drink thin air and can only dream of coffee. You cannot study." + newline + "You lose!" + newline.
 	 *                 Return value of cmq.isGameOver() is true.
 	 * </pre>
 	 */
