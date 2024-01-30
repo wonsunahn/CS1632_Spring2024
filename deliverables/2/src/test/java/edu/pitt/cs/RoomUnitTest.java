@@ -18,11 +18,11 @@ public class RoomUnitTest {
 
 	@Before
 	public void setup() {
-		// 1. Create a "Small" Room with a "Quaint Sofa" furnishing, no item, no north door (null), no south door (null), and assign to room.
-		isolatedRoom = Room.createInstance(InstanceType.IMPL, "Quaint sofa", "Small", Item.NONE, null, null);
+		// 1. Create a "Small" Room with a "Quaint Sofa" furnishing, no item, no north door (null), no south door (null), and assign to isolatedRoom.
+		// TODO: Fill in
 		
-		// 2. Create a "Funny" Room with a "Sad record player" furnishing, cream item, "Beige" north door, "Massive" south door, and assign to room.
-		connectedRoom = Room.createInstance(InstanceType.IMPL, "Sad record player", "Funny", Item.CREAM, "Beige", "Massive");
+		// 2. Create a "Funny" Room with a "Sad record player" furnishing, cream item, "Beige" north door, "Massive" south door, and assign to connectedRoom.
+		// TODO: Fill in
 	}
 
 	@After
