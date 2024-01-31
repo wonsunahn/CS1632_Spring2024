@@ -244,13 +244,13 @@ To do so, please use buggy instances of Cat and RentACat in StepDefinitions.java
 ```
 	@Given("a rent-a-cat facility")
 	public void aRentACatFacility() {
-		r = RentACat.createInstance(InstanceType.IMPL);
+		r = RentACat.createInstance(InstanceType.BUGGY);
 	}
 ```
 ```
 	@Given("a cat with ID {int} and name {string}")
 	public void aCatWithIDAndName(Integer id, String name) {
-		r.addCat(Cat.createInstance(InstanceType.IMPL, id, name));
+		r.addCat(Cat.createInstance(InstanceType.BUGGY, id, name));
 		System.out.println("Created cat " + id + ". " + name);
 	}
 ```
@@ -279,7 +279,7 @@ If you have faithfully implemented all the scenarios and steps, you should see
 ...
 ```
 
-Please don't forget to revert the buggy instances of Cat and RentACat to impl instances.
+Please don't forget to revert the BUGGY instances of Cat and RentACat to IMPL instances.
 
 # Submission
 
@@ -299,11 +299,11 @@ GradeScope grades your submission in two phases:
 
 1. RentACatImpl Test (score=number passing)
 
-   In this phase, your Cucumber tests are run against RentACatImpl.  All scenarios (14 in total) are expected to pass.
+   In this phase, your Cucumber tests are run against the IMPL objects.  All scenarios (14 in total) are expected to pass.
 
 1. RentACatBuggy Test (score=number failing)
 
-   In this phase, your Cucumber tests are run against RentACatBuggy.  All scenarios (14 in total) are expected to fail.
+   In this phase, your Cucumber tests are run against the BUGGY objects.  All scenarios (14 in total) are expected to fail.
 
 # Groupwork Plan
 
