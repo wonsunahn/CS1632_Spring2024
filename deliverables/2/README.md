@@ -296,8 +296,10 @@ uniform convention whatever you choose.
 
 # Grading
 
-TBD.  Most of the grading will be done by the autograder with a smaller
-percentage going to the coverage report.  I will announce it soon!
+* GradeScope autograder - Test Code: 60% of grade
+* GradeScope autograder - Implementation Code: 15% of grade
+* GradeScope autograder - Code Coverage >= 90%: 15% of grade
+* Report of code coverage: 10% of grade
 
 # Submission
 
@@ -323,7 +325,31 @@ link.
 
 # GradeScope Feedback
 
-TBD.
+The GradeScope autograder divided into largely 6 phases.  
+
+1. RoomUnitTest on RoomSolution and RoomBuggy
+2. PlayerUnitTest on PlayerSolution and PlayerBuggy
+3. CoffeeMakerQuestUnitTest on CoffeeMakerQuestSolution and CoffeeMakerQuestBuggy
+4. GameIntegrationTest on GameSolution and GameBuggy 
+5. GameIntegrationTestSolution on Game
+6. RoomImpl, PlayerImpl, CoffeeMakerQuestImpl Jacoco Coverage Check
+
+Just like for Exercise 2, each test class is run against first the solution
+version and then the buggy version.  The expectation is that they should all
+pass the solution version and fail the buggy version.  Both must be true for
+you to get points for a test method.
+
+The fifth phase, GameIntegrationTestSolution on Game, tests the correctness of
+your implementation using the solution version of the GameIntegrationTest.
+
+The sixth phase measures Jacoco instruction coverage for the three classes that
+you are asked to implement.  For RoomImpl and PlayerImpl, you have to reach the
+90% threshold to get the full 3 points.  For CoffeeMakerQuestImpl, you get the
+full 9 points if reach 90% and 3 points if you only reach 80%.
+
+Again, if you see test failures, read the feedback given by the autograder, fix
+your code, and retry.
+
 
 # Groupwork Plan
 
