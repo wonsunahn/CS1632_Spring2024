@@ -115,6 +115,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 
 * April 9, 1:00 - 2:15 PM: Thermo-Fisher Lecture
 
+* April 11, 1:00 - 2:15 PM: UPMC Lecture
+
 * Industry Guest Speakers (TBD)
 
 ## WEEK 15 (Week of 15 APR)
