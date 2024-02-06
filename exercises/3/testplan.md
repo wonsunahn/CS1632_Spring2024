@@ -70,7 +70,7 @@ EXECUTION STEPS:
 3. Type "csc" in the search box that pops up.
 4. Type [Enter] in the search box.
 POSTCONDITIONS: 
-* The 4th div element in the search results has the title:
+* The 3rd div element in the search results has the title:
   "Computer Science Club (CSC) | Department of Computer Science ...". 
   (Use "assert text" for xpath containing div[4].) 
 ```
