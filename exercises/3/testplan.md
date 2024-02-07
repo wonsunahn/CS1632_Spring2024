@@ -62,7 +62,7 @@ POSTCONDITIONS:
 
 ```
 IDENTIFIER: TEST-6-SEARCH-CSC
-TEST CASE: Check that the second item when searching "csc" iis the CSC Officers page.
+TEST CASE: Check that the third item when searching "csc" is the CSC Officers page.
 PRECONDITIONS: None.
 EXECUTION STEPS:
 1. Open the URL https://www.pitt.edu/ on the web browser.
