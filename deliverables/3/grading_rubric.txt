@@ -1,10 +1,10 @@
-Report content (20%):
+Report (20%):
 
 Summary and testing concerns:                             _____ / 5
 
-Defects reported properly:                                _____ / 15
-  * Expected behavior / observed behavior / repro steps (-5 if not)
-  * General quality. Well-specified, well-written. (-5 if not)
+GitHub Issues reported properly:                          _____ / 15
+  * Expected behavior / observed behavior / reproduction steps well formed (-5 if not)
+  * Each issue labeled, assigned, and closed through a pull request (-5 if not)
   * -5 for each defect less than 3 defects
 
 GradeScope autograder (80%):
