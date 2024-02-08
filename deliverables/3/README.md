@@ -205,10 +205,10 @@ Now you can run the D3Test JUnit class using Maven:
 mvn test
 ```
 
-Make sure all tests pass by looking at the results (the tests that should pass,
-not the ones that uncover defects of course :).  If there are any failures,
-slightly touch up the D3Test.java Selenium tests to make them pass.  Refer to
-the Exercise 3 troubleshooting guide:
+Make sure all tests pass by looking at the results (except for those that test
+defects, which should fail of course).  If there are any failures, slightly
+touch up the D3Test.java Selenium tests to make them pass.  Refer to the
+Exercise 3 troubleshooting guide:
 
 https://github.com/wonsunahn/CS1632_Spring2024/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
@@ -242,9 +242,12 @@ On the FIRST PAGE introduction, please describe the division of work between
 group members and also any difficulties you faced while using Selenium.
 
 ON A SEPARATE PAGE, paste a link to your GitHub issues page with (at least)
-three open issues for three defects.  Each defect should contain all necessary
-components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR,
-etc. described in Deliverable 1.  
+three closed issues for three defects.  Each defect should contain all
+necessary components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED
+BEHAVIOR, etc. described in Deliverable 1.  Just like for Exercise 2, please
+modify the requirements to resolve these defects in an issue branch and then
+merge them in using a pull request.  Don't forget to label and assign the
+issue.
 
 # Grading
 
