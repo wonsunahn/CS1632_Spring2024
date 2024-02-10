@@ -13,7 +13,7 @@ The exam will consist of these types of questions:
   * Multiple choice questions
   * Fill in the blank questions
   * Short answer questions (explain a concept, discuss pros/cons, etc.)
-  * JUnit / Gherkin / Cucumber / Sanitizer code tracing questions
+  * JUnit / Gherkin / Cucumber code tracing questions
   * JUnit / Gherkin / Cucumber coding questions
 
 If you want more JUnit or Cucumber coding practice, look inside the
