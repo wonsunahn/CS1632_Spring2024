@@ -18,7 +18,7 @@ public class RoomUnitTest {
 
 	@Before
 	public void setup() {
-		// 1. Create a "Small" Room with a "Quaint Sofa" furnishing, no item, no north door (null), no south door (null), and assign to isolatedRoom.
+		// 1. Create a "Small" Room with a "Quaint sofa" furnishing, no item, no north door (null), no south door (null), and assign to isolatedRoom.
 		// TODO: Fill in
 		
 		// 2. Create a "Funny" Room with a "Sad record player" furnishing, cream item, "Beige" north door, "Massive" south door, and assign to connectedRoom.
