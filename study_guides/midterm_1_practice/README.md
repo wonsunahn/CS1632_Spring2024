@@ -119,16 +119,21 @@ whatever you want the project name to be):
 mvn archetype:generate -DgroupId=edu.pitt.cs -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
+The above will create a generic project with JUnit testing.  If you want to create a project for both JUnit and Cucumber testing, you can use the following:
+
+```
+mvn archetype:generate -DgroupId=edu.pitt.cs -DartifactId=my-app -DarchetypeGroupId=io.cucumber -DarchetypeArtifactId=cucumber-archetype -DarchetypeVersion=6.7.0 -DinteractiveMode=false
+```
+
 This will create a folder my-app and under it, you will see a pom.xml file
 and an src/ folder with some sample code under it.  Please edit the pom.xml
 file in the following way.
 
-1. Replace 1.7 with 11 for the maven.compiler.source and
-   maven.compiler.target properties near the top.  This will instruct Maven
+1. Replace 1.7 or 1.8 with 11 in either the maven.compiler.source and
+   maven.compiler.target properties near the top or the maven-compiler-plugin configuration.  This will instruct Maven
 to use verion 11 of the Java compiler.
 
-1. Replace the dependencies section (which currently contains only JUnit
-   4.11) with the following block:
+1. Replace the dependencies section with the following block (so that you have Mockito):
 
    ```
    <dependencies>
@@ -160,10 +165,6 @@ to use verion 11 of the Java compiler.
            </dependency>
    </dependencies>
    ```
-
-   This allows you to use JUnit, Mockito, and Cucumber testing in your
-project.
-
 ## Add implementation and test Java classes
 
 Now, you are ready to add any Java files or Gherkin feature files under the
