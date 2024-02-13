@@ -119,7 +119,7 @@ whatever you want the project name to be):
 mvn archetype:generate -DgroupId=edu.pitt.cs -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
 ```
 
-The above will create a generic project with JUnit testing.  If you want to create a project for both JUnit and Cucumber testing, you can use the following:
+The above will create a generic project with JUnit testing.  If you want to create a project for both JUnit and Cucumber testing, you can use the cucumber-archetype artifact to create your project:
 
 ```
 mvn archetype:generate -DgroupId=edu.pitt.cs -DartifactId=my-app -DarchetypeGroupId=io.cucumber -DarchetypeArtifactId=cucumber-archetype -DarchetypeVersion=6.7.0 -DinteractiveMode=false
