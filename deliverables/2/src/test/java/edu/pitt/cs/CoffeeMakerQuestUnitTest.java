@@ -39,7 +39,7 @@ public class CoffeeMakerQuestUnitTest {
 	}
 
 	/**
-	 * Test case for String getInstructionsString().
+	 * Test case for String getHelpString().
 	 * 
 	 * <pre>
 	 * Preconditions: Player, rooms, and cmq test fixture has been created.
