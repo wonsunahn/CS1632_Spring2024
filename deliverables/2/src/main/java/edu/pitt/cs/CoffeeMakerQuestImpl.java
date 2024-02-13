@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class CoffeeMakerQuestImpl implements CoffeeMakerQuest {
 
 	static final String newline = System.lineSeparator(); // Platform independent newline ("\n" or "\r\n")
-	
+
 	// TODO: Add more member variables and methods as needed.
 
 	/**
@@ -89,9 +89,11 @@ public class CoffeeMakerQuestImpl implements CoffeeMakerQuest {
 	}
 
 	/**
-	 * A helper method for the "H" command.  It returns the following help string:
-	 * "N - Go north" + newline + "S - Go south" + newline + "L - Look and collect any items in the room" + newline +
-	 * "I - Show inventory of items collected" + newline + "D - Drink coffee made from items in inventory" + newline.
+	 * A helper method for the "H" command. It returns the following help string:
+	 * "N - Go north" + newline + "S - Go south" + newline + "L - Look and collect
+	 * any items in the room" + newline +
+	 * "I - Show inventory of items collected" + newline + "D - Drink coffee made
+	 * from items in inventory" + newline.
 	 * 
 	 * @return help string
 	 */
@@ -102,14 +104,9 @@ public class CoffeeMakerQuestImpl implements CoffeeMakerQuest {
 
 	/**
 	 * Processes the user command given in String cmd and returns the response
-	 * string. For the list of commands, please see the Coffee Maker Quest
-	 * requirements documentation (note that commands can be both upper-case and
-	 * lower-case). For the response strings, observe the response strings printed
-	 * by coffeemaker.jar. The "N" and "S" commands potentially change the location
-	 * of the player. The "L" command potentially adds an item to the player
-	 * inventory. The "D" command drinks the coffee and ends the game. Make
-	 * sure you use Player.getInventoryString() whenever you need to display
-	 * the inventory.
+	 * string. For the list of commands, please try giving the "H" command in the
+	 * solution jar. Make sure you use Player.getInventoryString() whenever you need
+	 * to display the inventory.
 	 * 
 	 * @param cmd the user command
 	 * @return response string for the command
