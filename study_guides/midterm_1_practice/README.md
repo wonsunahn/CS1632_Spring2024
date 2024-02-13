@@ -112,17 +112,17 @@ Tutorial](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.
 ## Generate project folder from quick start archetype
 
 Please execute the following command in the location where you want to
-create your new project folder (replacing the artifactId my-app with
+create your new project folder (replacing the artifactId junit-app with
 whatever you want the project name to be):
 
 ```
-mvn archetype:generate -DgroupId=edu.pitt.cs -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+mvn archetype:generate "-DgroupId=edu.pitt.cs" "-DartifactId=junit-app" "-DarchetypeArtifactId=maven-archetype-quickstart" "-DarchetypeVersion=1.4" "-DinteractiveMode=false"
 ```
 
 The above will create a generic project with JUnit testing.  If you want to create a project for both JUnit and Cucumber testing, you can use the cucumber-archetype artifact to create your project:
 
 ```
-mvn archetype:generate -DgroupId=edu.pitt.cs -DartifactId=my-app -DarchetypeGroupId=io.cucumber -DarchetypeArtifactId=cucumber-archetype -DarchetypeVersion=6.7.0 -DinteractiveMode=false
+mvn archetype:generate "-DgroupId=edu.pitt.cs" "-DartifactId=cucumber-app" "-DarchetypeGroupId=io.cucumber" "-DarchetypeArtifactId=cucumber-archetype" "-DarchetypeVersion=6.7.0" "-DinteractiveMode=false"
 ```
 
 This will create a folder my-app and under it, you will see a pom.xml file
