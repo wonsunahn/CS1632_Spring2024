@@ -110,7 +110,7 @@ public class Monkey {
 	public Monkey() {
 		thisMonkeyNum = monkeyNum;
 		monkeyNum++;
-		// id = generateId(thisMonkeyNum);
+		id = generateId(thisMonkeyNum);
 	}
 
 }

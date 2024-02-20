@@ -71,7 +71,7 @@ public class MonkeySimPinningTest {
 	}
 
 	@Test
-	public void testStringifyResults() {
+	public void testStringifyResults() throws NoIdException {
 		String ret = ms.stringifyResults(5, ml.get(2), ml.get(1));
 		assertEquals("Defect when stringifying round 5, monkey 2, monkey 1",
 				"//Round 5: Threw banana from Monkey (#2 / ID 223494) to Monkey (#1 / ID 223493)", ret);
@@ -84,7 +84,7 @@ public class MonkeySimPinningTest {
 	}
 
 	@Test
-	public void testArgument5RunSimulation() {
+	public void testArgument5RunSimulation() throws NoIdException {
 		ms.runSimulation(ml, mw);
 		String nl = System.getProperty("line.separator");
 		assertEquals("Defect in the output for running simulation with argument 5",

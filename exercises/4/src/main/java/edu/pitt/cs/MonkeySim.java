@@ -85,22 +85,17 @@ public class MonkeySim {
 	 * @return String string version of round
 	 */
 
-	public String stringifyResults(int c, Monkey m, Monkey m2) {
+	public String stringifyResults(int c, Monkey m, Monkey m2) throws NoIdException {
 		String toReturn = new String("");
-		try {
-			for (int j = 0; j < HEADER; j++) {
-				toReturn += "@";
-			}
-			toReturn += new String("//Round ");
-			toReturn += new String("" + c);
-			toReturn += new String(": Threw banana from Monkey (#");
-			toReturn += new String(m.getMonkeyNum() + " / ID " + m.getId());
-			toReturn += new String(") to Monkey (#");
-			toReturn += new String(m2.getMonkeyNum() + " / ID " + m2.getId() + ")");
-		} catch (NoIdException noidex) {
-			System.out.println("INVALID MONKEY!");
-			System.exit(2);
+		for (int j = 0; j < HEADER; j++) {
+			toReturn += "@";
 		}
+		toReturn += new String("//Round ");
+		toReturn += new String("" + c);
+		toReturn += new String(": Threw banana from Monkey (#");
+		toReturn += new String(m.getMonkeyNum() + " / ID " + m.getId());
+		toReturn += new String(") to Monkey (#");
+		toReturn += new String(m2.getMonkeyNum() + " / ID " + m2.getId() + ")");
 		return toReturn.substring(HEADER);
 	}
 
@@ -153,7 +148,7 @@ public class MonkeySim {
 	 * @return int number of rounds taken to get to first monkey
 	 */
 
-	public int runSimulation(List<Monkey> ml, MonkeyWatcher mw) {
+	public int runSimulation(List<Monkey> ml, MonkeyWatcher mw) throws NoIdException {
 		while (!getFirstMonkey(ml).hasBanana()) {
 			mw.incrementRounds();
 			Monkey m = ml.get(monkeyWithBanana(ml));
@@ -179,13 +174,9 @@ public class MonkeySim {
 	 * @param args - Array of arguments from cmd line
 	 */
 
-	public static void main(String[] args) throws InfiniteLoopException {
-		try {
-			Thread.sleep(30000);
-		} catch (InterruptedException iex) {
-		}
+	public static void main(String[] args) throws InfiniteLoopException, NoIdException {
 		int s = getStartingMonkeyNum(args);
-
+		
 		Monkey tmpMonkey;
 		Banana b = new Banana();
 		MonkeyWatcher mw = new MonkeyWatcher();
