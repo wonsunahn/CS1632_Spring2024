@@ -240,7 +240,7 @@ instrumented)" below the button.  You need to perform all these steps within
 the 30 second sleep window given above.  If you need more time, just extend the
 sleep window.  If all goes well, your VisualVM window should look like below:
 
-   ![alt text](VisualVM_setup.png "Setting up VisualVM profiler")
+   ![alt text](img/VisualVM_setup.png "Setting up VisualVM profiler")
 
 
 1. After the app wakes up, you will see profile information continue to get
@@ -264,11 +264,11 @@ and PNG.  Choose the PNG option and save to a file named
 **hotspots-before.png**.  Refer to the below figure while following these
 instructions.
 
-![alt text](VisualVM_profiling.png "Using VisualVM profiler")
+![alt text](img/VisualVM_profiling.png "Using VisualVM profiler")
 
 The exported hotspots-before.png file should look like the following:
 
-![alt text](hotspots-before-demo.png "Hotspots panel after optimizations")
+![alt text](img/hotspots-before-demo.png "Hotspots panel after optimizations")
 
 The exact runtimes will be different for you since we are running on different
 machines but the ranking should look similar.  I want you to refactor **four** of
@@ -310,7 +310,7 @@ java -cp target/classes edu.pitt.cs.MonkeySim 23
 Repeat the steps described above to generate a new hot spots list named
 **hotspots-after.png**. This is what I got after optimizing:
 
-![alt text](hotspots-after-demo.png "VisualVM snapshot after optimizations")
+![alt text](img/hotspots-after-demo.png "VisualVM snapshot after optimizations")
 
 Note that I achieved marked improvement for all four candidate methods.  You
 should see similar improvements.  If you do, this is when you pat yourself on
