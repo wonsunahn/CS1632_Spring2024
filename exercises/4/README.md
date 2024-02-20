@@ -18,7 +18,7 @@ Spring Semester 2024 - Exercise 4
 
 * DUE: February 25 (Sunday), 2024 11:59 PM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/jHEbm9xm
 
 ## Before You Begin
 
