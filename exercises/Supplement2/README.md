@@ -24,7 +24,7 @@ Spring Semester 2024 - Supplementary Exercise 2
 
 * DUE: March 3 (Sunday), 2024 11:59 PM 
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/AW-eqeBR
 
 ## Description
 
@@ -504,7 +504,7 @@ https://pholser.github.io/junit-quickcheck/site/1.0/usage/complex-types.html
 
 * DUE: March 19 (Tuesday), 2024 before start of class
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/ULIKVkJ4
 
 This extra credit is worth 1 point out of 100 points for the entire course.
 Note that you need to get 100/100 on the autograder to get credit.  Partial
