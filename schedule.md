@@ -125,9 +125,9 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 
 * April 11, 1:00 - 2:15 PM: UPMC Lecture
 
-* April 9, 4:00 - 5:15 PM: Sheetz Lecture
+* April 9, 4:00 - 5:15 PM: Deloitte Lecture
 
-* April 11, 4:00 - 5:15 PM: Deloitte Lecture
+* April 11, 4:00 - 5:15 PM: Sheetz Lecture
 
 * Industry Guest Speakers (TBD)
 
