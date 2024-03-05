@@ -1,9 +1,9 @@
 - [CS 1632 - Software Quality Assurance](#cs-1632---software-quality-assurance)
   * [Description](#description)
-  * [Connecting to thoth.cs.pitt.edu](#connecting-to-thothcspittedu)
-    + [Using VSCode Remote SSH Extension (recommended)](#using-vscode-remote-ssh-extension-recommended)
-    + [Using commandline SSH client (not recommended)](#using-commandline-ssh-client-not-recommended)
-  * [Building](#building)
+  * [Setting up Build Environment](#setting-up-build-environment)
+    + [Installing Docker Image and Launching Container](#installing-docker-image-and-launching-container)
+    + [Cloning and Building](#cloning-and-building)
+    + [Editing Source Code on VSCode](#editing-source-code-on-vscode)
   * [Testing and Debugging Memory Errors](#testing-and-debugging-memory-errors)
     + [Turning off ASLR (Address Space Layout Randomization)](#turning-off-aslr-address-space-layout-randomization)
     + [Using Google ASAN (Address Sanitizer)](#using-google-asan-address-sanitizer)
@@ -44,110 +44,88 @@ Nondeterminism lecture.  By trying out these programs, you will learn the follow
 
 1. Compare ASAN with Valgrind, another memory error detection tool.
 
-## Connecting to thoth.cs.pitt.edu
+## Setting up Build Environment
 
-In order to use ASAN or TSAN, you need to clang version >= 3.1 or gcc version >= 4.8.
-Since you are unlikely to have either installed on your local
-computer, I will ask you to connect using SSH to one of the departmental public
-Linux servers at thoth.cs.pitt.edu.  There are two ways you can do this, using
-VSCode Remote SSH (recommended) or using the commandline SSH client on a
-terminal.
+In order to use ASAN or TSAN, you need to clang version >= 3.1 or gcc version
+>= 4.8.  Since you are unlikely to have either installed on your local
+computer, I am going to ask you to download and install the official GCC Docker
+image and launch a Docker container so you can connect to it and work on the
+exercise.
 
-### Using VSCode Remote SSH Extension (recommended)
+### Installing Docker Image and Launching Container
 
-Please follow these steps:
+1. Install Docker Desktop: https://www.docker.com/products/docker-desktop/
 
-1. On VSCode, install the "Remote - SSH" extension by searching for it on the extensions menu on the left:
-   https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh
-
-1. Go to the "Remote - SSH" extension settings by clicking on the settings icon
-and then uncheck the "Use Flock" setting.  Make sure you do this, or you will
-not be able to edit files remotely later on.  The setting looks like the below
-image:
-
-   <img alt="Uncheck Use Flock setting" src="img/remote-ssh-uncheck-use-flock.png">
-
-1. By now, you should see a "Remote Explorer" icon pop up on the left hand
-menu.  Create a new connection by clicking on the "+" icon for a new
-connection.  On the command prompt that says "Enter SSH Connection Command",
-enter the following:
+1. Pull official GCC image by typing following on command line:
    ```
-   ssh USERNAME@thoth.cs.pitt.edu
+   docker pull gcc
    ```
-   Where USERNAME is replaced with your own Pitt ID.
+   This should download and register a new image on Docker Desktop on the "Images" menu (the second icon on the left hand side).
 
-1. This will create a new SSH connection named "thoth.cs.pitt.edu".  Click the
-connect icon.  This will prompt you for your Pitt password.  Enter then
-password.  If the connection was successful, when clicking on the "Remote
-Explorer" menu, you should see a green check mark next to "thoth.cs.pitt.edu".
-
-1. Go to View > Terminal and you should see a terminal logged on to thoth.
-
-### Using commandline SSH client (not recommended)
-
-Please follow these steps:
-
-1. Every OS (Windows, MacOS, Linux) comes with an SSH commandline client.  Open a commandline shell (e.g. cmd, terminal) then type:
+1. Launch a privileged container for the GCC image by using the following command line:
    ```
-   ssh USERNAME@thoth.cs.pitt.edu
+   docker run --privileged -it gcc
    ```
-   Where USERNAME is replaced with your own Pitt ID.
+   The above should register a new running container on Docker Desktop on the "Containers" menu, and also you should get a new prompt on the terminal, like this:
+   ```
+   wahn@mc-wifi-10-215-129-212 3 % docker run --privileged -it gcc
+   root@56d5c19686b3:/#
+   ```
 
-1. Once connected, the host will ask for your Pitt credentials.  Enter your Pitt password.
+### Cloning and Building
 
-## Building
+1. On the terminal opened on Docker, navigate to the /root directory:
+   ```
+   cd root/
+   ```
+1. Then clone your GitHub Classroom repository:
 
-Once logged in, you will be in your home directory under
-/afs/pitt.edu/home/.  Create and cd into a directory of your choice (or you
-can stay at your home directory) and then clone your GitHub Classroom
-repository:
+   ```
+   git clone <your GitHub Classroom repository HTTPS URL>
+   ```
 
-```
-git clone <your GitHub Classroom repository HTTPS URL>
-```
-
-This will ask for your Username and Password.  Username is your GitHub
+   This will ask for your Username and Password.  Username is your GitHub
 account username, but Password is not your password.  Password
 authentication on GitHub has been deprecated on August 2021, so now you have
 to use something called a Personal Authenication Token (PAT) in place of the
 password.  Here are instructions on how to create a PAT:
 
-https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
+   https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token
 
-Creating a classic PAT is slightly simpler, if you don't need fine-grained
+   Creating a classic PAT is slightly simpler, if you don't need fine-grained
 access control to individual repositories.  Use the PAT to authenticate in
 place of your password when cloning.
 
-Now cd into your cloned directory.  I have provided a Makefile build script
+   Now cd into your cloned directory.  I have provided a Makefile build script
 to automate the build.  All you have to do is invoke 'make':
 
-```
-$ make
-gcc -c -g -w heap.c -o heap.o
-gcc heap.o -lm -o heap.bin
-gcc -c -g -w stack.c -o stack.o
-gcc stack.o -lm -o stack.bin
-gcc -c -g -w stack_overflow.c -o stack_overflow.o
-gcc stack_overflow.o -lm -o stack_overflow.bin
-gcc -c -g -w stack_pointer_return.c -o stack_pointer_return.o
-gcc stack_pointer_return.o -lm -o stack_pointer_return.bin
-gcc -c -g -w heap_overflow.c -o heap_overflow.o
-gcc heap_overflow.o -lm -o heap_overflow.bin
-gcc -c -g -w binary_tree.c -o binary_tree.o
-gcc binary_tree.o -lm -o binary_tree.bin
-gcc -c -g -w -pthread datarace.c -o datarace.o
-gcc datarace.o -lm -pthread -o datarace.bin
-gcc -c -g -w -fsanitize=address stack_overflow.c -o stack_overflow.asan.o
-gcc stack_overflow.asan.o -lm -fsanitize=address -o stack_overflow.asan
-gcc -c -g -w -fsanitize=address stack_pointer_return.c -o stack_pointer_return.asan.o
-gcc stack_pointer_return.asan.o -lm -fsanitize=address -o stack_pointer_return.asan
-gcc -c -g -w -fsanitize=address heap_overflow.c -o heap_overflow.asan.o
-gcc heap_overflow.asan.o -lm -fsanitize=address -o heap_overflow.asan
-gcc -c -g -w -fsanitize=address binary_tree.c -o binary_tree.asan.o
-gcc binary_tree.asan.o -lm -fsanitize=address -o binary_tree.asan
-gcc -c -g -w -fPIE -fsanitize=thread -pthread datarace.c -o datarace.tsan.o
-gcc datarace.tsan.o -lm -pie -fsanitize=thread -o datarace.tsan
-```
+   ```
+   $ make
+   gcc -c -g -w heap.c -o heap.o
+   gcc heap.o -lm -o heap.bin
+   gcc -c -g -w stack.c -o stack.o
+   gcc stack.o -lm -o stack.bin
+   gcc -c -g -w stack_overflow.c -o stack_overflow.o
+   gcc stack_overflow.o -lm -o stack_overflow.bin
+   gcc -c -g -w stack_pointer_return.c -o stack_pointer_return.o
+   gcc stack_pointer_return.o -lm -o stack_pointer_return.bin
+   gcc -c -g -w heap_overflow.c -o heap_overflow.o
+   gcc heap_overflow.o -lm -o heap_overflow.bin
+   gcc -c -g -w binary_tree.c -o binary_tree.o
+   gcc binary_tree.o -lm -o binary_tree.bin
+   gcc -c -g -w -pthread datarace.c -o datarace.o
+   gcc datarace.o -lm -pthread -o datarace.bin
+   gcc -c -g -w -fsanitize=address stack_overflow.c -o stack_overflow.asan.o
+   gcc stack_overflow.asan.o -lm -fsanitize=address -o stack_overflow.asan
+   gcc -c -g -w -fsanitize=address stack_pointer_return.c -o stack_pointer_return.asan.o
+   gcc stack_pointer_return.asan.o -lm -fsanitize=address -o stack_pointer_return.asan
+   gcc -c -g -w -fsanitize=address heap_overflow.c -o heap_overflow.asan.o
+   gcc heap_overflow.asan.o -lm -fsanitize=address -o heap_overflow.asan
+   gcc -c -g -w -fsanitize=address binary_tree.c -o binary_tree.asan.o
+   gcc binary_tree.asan.o -lm -fsanitize=address -o binary_tree.asan
+   gcc -c -g -w -fPIE -fsanitize=thread -pthread datarace.c -o datarace.tsan.o
+   gcc datarace.tsan.o -lm -pie -fsanitize=thread -o datarace.tsan
+   ```
 
 Note how when I create ASAN instrumented binaries (e.g. stack_overflow.asan,
 stack_pointer_return.asan, ...), I pass the **-fsanitize=address** compiler option
@@ -159,6 +137,17 @@ I pass the **-fsanitize=thread** compiler option
 to gcc.  I also pass the **-fPIE** and **-pie** options to the compilation and linking
 stages respectively.  This makes your code position independent, and is needed for
 TSAN to work flawlessly (I'm assuming you learned what PIE is in CS 449).
+
+### Editing Source Code on VSCode
+
+There is no editor on that image to speak of, so you will have to use VS Code
+to edit the source code.  Please install the Docker extension on VSCode.  The
+first one that pops up when you search for "Docker" on the extensions search
+menu:
+https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+
+Then, click on the Docker extension and access the "gcc" container in the list
+of CONTAINERS to navigate to the file you want to edit.
 
 ## Testing and Debugging Memory Errors
 
