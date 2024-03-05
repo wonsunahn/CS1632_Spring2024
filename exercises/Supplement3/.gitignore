@@ -1,0 +1,8 @@
+
+*.un~
+*.md~
+*.swp
+*.o
+*.bin
+*.asan
+*.tsan
