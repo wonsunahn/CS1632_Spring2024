@@ -21,7 +21,7 @@ Spring Semester 2024 - Supplementary Exercise 3
 
 DUE: March 10 (Sunday), 2024 11:59 PM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/baOB8a1D
 
 ## Description
 
