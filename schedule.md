@@ -129,8 +129,6 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 
 * April 11, 4:00 - 5:15 PM: Sheetz Lecture
 
-* Industry Guest Speakers (TBD)
-
 ## WEEK 15 (Week of 15 APR)
 
 * Class 1: Midterm 2 review
