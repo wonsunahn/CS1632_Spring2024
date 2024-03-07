@@ -141,13 +141,18 @@ TSAN to work flawlessly (I'm assuming you learned what PIE is in CS 449).
 ### Editing Source Code on VSCode
 
 There is no editor on that image to speak of, so you will have to use VS Code
-to edit the source code.  Please install the Docker extension on VSCode.  The
-first one that pops up when you search for "Docker" on the extensions search
-menu:
-https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+to edit the source code.  Please install the "Docker" and "Dev Containers"
+extensions on VSCode.
 
-Then, click on the Docker extension and access the "gcc" container in the list
-of CONTAINERS to navigate to the file you want to edit.
+* Docker: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
+* Dev Containers: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+
+Then, click on the Docker extension and then right click on the "gcc" container
+in the list of CONTAINERS.  Then click on "Attach Visual Studio Code" to launch
+a new VSCode window attached to the container.  Now, if you open a terminal, it
+will open into the container and if you click on "Open Folder" on the Explorer,
+you will be able to open a folder in the container.  Please open the folder
+where you cloned your git repository to start editing the files.
 
 ## Testing and Debugging Memory Errors
 
