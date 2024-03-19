@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.checkstyle.version": "9.3",
+    "java.checkstyle.configuration": "${workspaceFolder}/google_checks_modified.xml"
+}
