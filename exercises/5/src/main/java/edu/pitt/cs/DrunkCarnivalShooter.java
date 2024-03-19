@@ -10,15 +10,20 @@ package edu.pitt.cs;
 public interface DrunkCarnivalShooter {
 	/**
 	 * Returns the either DrunkCarnivalShooterImpl or DrunkCarnivalShooterBuggy instance
-	 * depending on the Config.
+	 * depending on the type parameter.
 	 * 
-	 * @return DrunkCarnivalShooter object
+	 * @param type The type of object to be created.
+	 * @return DrunkCarnivalShooter object.
 	 */
-	public static DrunkCarnivalShooter createInstance() {
-		if (Config.getBuggy()) {
-			return new DrunkCarnivalShooterBuggy();
-		} else {
-			return new DrunkCarnivalShooterImpl();
+	public static DrunkCarnivalShooter createInstance(InstanceType type) {
+		switch (type) {
+			case IMPL:
+				return new DrunkCarnivalShooterImpl();
+			case BUGGY:
+				return new DrunkCarnivalShooterBuggy();
+			default:
+				assert (false);
+				return null;
 		}
 	}
 

@@ -37,7 +37,7 @@ public class DrunkCarnivalShooterTest extends TestJPF {
 		 */
 		
 		// Create the game
-		shooter = DrunkCarnivalShooter.createInstance();
+		shooter = DrunkCarnivalShooter.createInstance(InstanceType.IMPL);
 		// Set up the targets in the game to reflect the targets array
 		for (int i = 0; i < 4; i++) {
 			if (targets[i] == false) {
