@@ -988,10 +988,13 @@ outputs:
    ```
    Expected output: [jpf_junit_run.txt](jpf_junit_run.txt).  
 
-1. Result of running DrunkCarnivalShooterTest on DrunkCarnivalShooterBuggy. Corresponds to the autograder phase 2 output.
-   First, insert the following line at the beginning of your setUp() method in DrunkCarnivalShooterTest.java:
+1. Result of running DrunkCarnivalShooterTest on DrunkCarnivalShooterBuggy.
+Corresponds to the autograder phase 2 output.  In order to test
+DrunkCarnivalShooterBuggy, change the instance type of DrunkCarnivalShooter to
+InstanceType.BUGGY in DrunkCarnivalShooterTest.java setUp() method:
+
    ```
-   Config.setBuggy(true);
+   shooter = DrunkCarnivalShooter.createInstance(InstanceType.BUGGY);
    ```
 
    Then, run the JUnit test again:
@@ -1005,7 +1008,8 @@ outputs:
    Expected output: [jpf_junit_buggy_run.txt](jpf_junit_buggy_run.txt).
    
 Minor details like elapsed time statistics can differ but the search output and
-the results output should look mostly similar.  
+the results output should look mostly similar.  Don't forget to revert your
+instance type to InstanceType.IMPL after you are done.
 
 ## Resources
 
