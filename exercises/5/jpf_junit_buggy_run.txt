@@ -1,104 +1,374 @@
-JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
+$ java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -jar build/RunTest.jar edu.pitt.cs.DrunkCarnivalShooterTest
+
+......................................... testing testShoot()
+  running jpf with args:
+[WARNING] unknown classpath element: C:\Users\mrabb\Documents\github\cs1632\CS1632_DrunkCarnivalShooter_Solution\jpf-core\build\classes
+JavaPathfinder core system v8.0 (rev 1a704e1d6c3d92178504f8cdfe57b068b4e22d9c) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
-TestRunner.main("buggy")
+edu.pitt.cs.DrunkCarnivalShooterTest.runTestMethod()
 
-====================================================== search started: 10/25/20 10:21 PM
-TESTING BUGGY IMPLEMENTATION
+====================================================== search started: 3/19/24, 2:39 AM
+[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.getUnsafe()Lsun/misc/Unsafe;
 
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||               (targetChoice=0): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||          ||   (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                     (targetChoice=0): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                ||   (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||         (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||               (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||               (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=0): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=0): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||         (targetChoice=1): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||    ||   (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||               (targetChoice=1): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||          ||   (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                     (targetChoice=1): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                ||   (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||         (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||         (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||               (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||               (targetChoice=1): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=1): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=1): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=1): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=1): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:                    ||   (targetChoice=2): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||         (targetChoice=2): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||    ||   (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||    ||   (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||               (targetChoice=2): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||          ||   (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||          ||   (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                ||   (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||         (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||               (targetChoice=2): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=2): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=2): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=2): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=2): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:                    ||   (targetChoice=3): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||         (targetChoice=3): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||    ||   (targetChoice=3): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:              ||    ||   (targetChoice=3): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||          ||   (targetChoice=3): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=3): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=3): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=3): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                ||   (targetChoice=3): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||         (targetChoice=3): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=3): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||          ||    ||   (targetChoice=3): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||          ||   (targetChoice=3): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||         (targetChoice=3): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=3): expected:<3> but was:<2>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||    ||    ||    ||   (targetChoice=3): expected:<3> but was:<2>
+====================================================== error 1
+gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+java.lang.AssertionError: Failure in Round #0:        ||               (targetChoice=0):
+        at gov.nasa.jpf.util.test.TestJPF.fail(gov/nasa/jpf/util/test/TestJPF.java:164)
+        at gov.nasa.jpf.util.test.TestJPF.assertEquals(gov/nasa/jpf/util/test/TestJPF.java:1054)
+        at edu.pitt.cs.DrunkCarnivalShooterTest.testShoot(edu/pitt/cs/DrunkCarnivalShooterTest.java:109)
+        at java.lang.reflect.Method.invoke(gov.nasa.jpf.vm.JPF_java_lang_reflect_Method)
+        at gov.nasa.jpf.util.test.TestJPF.runTestMethod(gov/nasa/jpf/util/test/TestJPF.java:648)
+
+
+====================================================== trace #1
+------------------------------------------------------ transition #0 thread: 0
+gov.nasa.jpf.vm.choice.ThreadChoiceFromSet {id:"ROOT" ,1/1,isCascaded:false}
+      [9202 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:17 : public class DrunkCarnivalShooterTest extends TestJPF {
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:17 : public class DrunkCarnivalShooterTest extends TestJPF {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:3 : import static org.junit.Assert.assertEquals;
+      [18 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:94 : if (verifyNoPropertyViolation() == false) {
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:94 : if (verifyNoPropertyViolation() == false) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:97 : setUp();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:28 : Config.setBuggy(true);
+      [1 insn w/o sources]
+  edu/pitt/cs/Config.java:5      : private static boolean buggy = false;
+  edu/pitt/cs/Config.java:1      : package edu.pitt.cs;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:28 : Config.setBuggy(true);
+  edu/pitt/cs/Config.java:8      : buggy = val;
+  edu/pitt/cs/Config.java:9      : }
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:32 : shooter = DrunkCarnivalShooter.createInstance();
+  edu/pitt/cs/DrunkCarnivalShooter.java:18 : if (Config.getBuggy()) {
+  edu/pitt/cs/Config.java:12     : return buggy;
+  edu/pitt/cs/DrunkCarnivalShooter.java:18 : if (Config.getBuggy()) {
+  edu/pitt/cs/DrunkCarnivalShooter.java:19 : return new DrunkCarnivalShooterBuggy();
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:26 : DrunkCarnivalShooterBuggy() {
+      [1 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:27 : rand = new Random();
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:27 : rand = new Random();
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:28 : targets = new ArrayList<Boolean>();
+      [9 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:28 : targets = new ArrayList<Boolean>();
+      [16 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:28 : targets = new ArrayList<Boolean>();
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:29 : remainingTargetNum = 4;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:30 : for (int i = 0; i < remainingTargetNum; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [182 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:30 : for (int i = 0; i < remainingTargetNum; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [29 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:30 : for (int i = 0; i < remainingTargetNum; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [29 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:30 : for (int i = 0; i < remainingTargetNum; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+      [29 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:31 : targets.add(true);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:30 : for (int i = 0; i < remainingTargetNum; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:33 : }
+  edu/pitt/cs/DrunkCarnivalShooter.java:19 : return new DrunkCarnivalShooterBuggy();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:32 : shooter = DrunkCarnivalShooter.createInstance();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:34 : targetChoice = Verify.getInt(0, 3);
+      [1 insn w/o sources]
+------------------------------------------------------ transition #1 thread: 0
+gov.nasa.jpf.vm.choice.IntIntervalGenerator[id="verifyGetInt(II)",isCascaded:false,0..3,delta=+1,cur=0]
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:34 : targetChoice = Verify.getInt(0, 3);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:36 : targets = new boolean[4];
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:37 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #2 thread: 0
+gov.nasa.jpf.vm.BooleanChoiceGenerator[[id="verifyGetBoolean",isCascaded:false,{>false,true}]
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:37 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #3 thread: 0
+gov.nasa.jpf.vm.BooleanChoiceGenerator[[id="verifyGetBoolean",isCascaded:false,{false,>true}]
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:37 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #4 thread: 0
+gov.nasa.jpf.vm.BooleanChoiceGenerator[[id="verifyGetBoolean",isCascaded:false,{>false,true}]
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:37 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+      [1 insn w/o sources]
+------------------------------------------------------ transition #5 thread: 0
+gov.nasa.jpf.vm.BooleanChoiceGenerator[[id="verifyGetBoolean",isCascaded:false,{>false,true}]
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:38 : targets[i] = Verify.getBoolean();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:37 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:43 : if (targets[i] == false) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:44 : shooter.takeDownTarget(i);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [33 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:109 : remainingTargetNum--;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:110 : return true;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:44 : shooter.takeDownTarget(i);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:42 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:43 : if (targets[i] == false) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:42 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:43 : if (targets[i] == false) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:44 : shooter.takeDownTarget(i);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [33 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:109 : remainingTargetNum--;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:110 : return true;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:44 : shooter.takeDownTarget(i);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:42 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:43 : if (targets[i] == false) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:44 : shooter.takeDownTarget(i);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [33 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:109 : remainingTargetNum--;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:110 : return true;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:44 : shooter.takeDownTarget(i);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:42 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:49 : failString = "Failure in " + shooter.getRoundString() + " (targetChoice=" + targetChoice + "):";
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:64 : StringBuffer buf = new StringBuffer();
+      [117 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:64 : StringBuffer buf = new StringBuffer();
+      [18 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:64 : StringBuffer buf = new StringBuffer();
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:65 : buf.append("Round #" + roundNum + ":");
+      [491 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:65 : buf.append("Round #" + roundNum + ":");
+      [108 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:65 : buf.append("Round #" + roundNum + ":");
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [20 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [9 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [37 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:67 : if (standing) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:70 : buf.append("      ");
+      [108 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:70 : buf.append("      ");
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [9 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [37 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:67 : if (standing) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:68 : buf.append("  ||  ");
+      [167 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:68 : buf.append("  ||  ");
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:69 : } else {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [9 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [37 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:67 : if (standing) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:70 : buf.append("      ");
+      [108 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:70 : buf.append("      ");
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [9 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [37 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:67 : if (standing) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:70 : buf.append("      ");
+      [108 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:70 : buf.append("      ");
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+      [8 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:66 : for (boolean standing : targets) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:73 : return buf.toString();
+      [72 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:73 : return buf.toString();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:49 : failString = "Failure in " + shooter.getRoundString() + " (targetChoice=" + targetChoice + "):";
+      [871 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:49 : failString = "Failure in " + shooter.getRoundString() + " (targetChoice=" + targetChoice + "):";
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:50 : }
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:100 : StringBuilder builder = new StringBuilder();
+      [18 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:100 : StringBuilder builder = new StringBuilder();
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:101 : shooter.shoot(targetChoice, builder);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:86 : int newT = shootFuzz(t, builder);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:45 : int offsetNum = rand.nextInt(3) - 1;
+      [1 insn w/o sources]
+------------------------------------------------------ transition #6 thread: 0
+gov.nasa.jpf.vm.choice.IntIntervalGenerator[id="verifyGetInt(II)",isCascaded:false,0..2,delta=+1,cur=2]
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:45 : int offsetNum = rand.nextInt(3) - 1;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:46 : int fuzzedT = t + offsetNum;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:47 : if (offsetNum > 0) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:48 : builder.append("You aimed at target #" + t
+      [609 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:48 : builder.append("You aimed at target #" + t
+      [166 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:48 : builder.append("You aimed at target #" + t
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:50 : } else if (offsetNum < 0) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:54 : return fuzzedT;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:86 : int newT = shootFuzz(t, builder);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:87 : if (takeDownTarget(newT)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:107 : if (isTargetStanding(t)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [2 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+      [33 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:108 : targets.set(t, false);
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:109 : remainingTargetNum--;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:110 : return true;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:87 : if (takeDownTarget(newT)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:88 : builder.append("You hit target #" + newT
+      [611 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:88 : builder.append("You hit target #" + newT
+      [164 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:88 : builder.append("You hit target #" + newT
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:90 : remainingTargetNum--;
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:91 : return true;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:101 : shooter.shoot(targetChoice, builder);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:103 : int remaining = 0;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:104 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:104 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:104 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:104 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [26 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+      [3 insn w/o sources]
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:123 : return t >= 0 && t < targets.size() && targets.get(t);
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:105 : if (shooter.isTargetStanding(i)) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:104 : for (int i = 0; i < 4; i++) {
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:109 : assertEquals(failString, remaining, shooter.getRemainingTargetNum());
+  edu/pitt/cs/DrunkCarnivalShooterBuggy.java:132 : return remainingTargetNum;
+  edu/pitt/cs/DrunkCarnivalShooterTest.java:109 : assertEquals(failString, remaining, shooter.getRemainingTargetNum());
+      [70 insn w/o sources]
 
 ====================================================== results
-no errors detected
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError: Failure in Round #0:    ..."
 
-====================================================== statistics
-elapsed time:       00:00:01
-states:             new=127,visited=190,backtracked=317,end=192
-search:             maxDepth=7,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=125
-heap:               new=19796,released=37452,maxLive=1658,gcCycles=317
-instructions:       479960
-max memory:         245MB
-loaded code:        classes=285,methods=4131
+====================================================== search finished: 3/19/24, 2:39 AM
+java.lang.AssertionError: JPF found unexpected errors: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+        at gov.nasa.jpf.util.test.TestJPF.fail(TestJPF.java:164)
+        at gov.nasa.jpf.util.test.TestJPF.noPropertyViolation(TestJPF.java:816)
+        at gov.nasa.jpf.util.test.TestJPF.verifyNoPropertyViolation(TestJPF.java:830)
+        at edu.pitt.cs.DrunkCarnivalShooterTest.testShoot(DrunkCarnivalShooterTest.java:94)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at gov.nasa.jpf.util.test.TestJPF.invoke(TestJPF.java:499)
+        at gov.nasa.jpf.util.test.TestJPF.runTests(TestJPF.java:558)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at gov.nasa.jpf.tool.RunTest.main(RunTest.java:185)
+......................................... test method failed with: JPF found unexpected errors: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+......................................... testShoot: Failed
 
-====================================================== search finished: 10/25/20 10:21 PM
+......................................... execution of testsuite: edu.pitt.cs.DrunkCarnivalShooterTest FAILED
+.... [1] testShoot: Failed
+......................................... tests: 1, failures: 1, errors: 0

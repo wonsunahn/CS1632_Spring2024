@@ -1,0 +1,4 @@
+target = edu.pitt.cs.Rand
+
+# Don't stop at the first error.  Report all errors.
+search.multiple_errors = true

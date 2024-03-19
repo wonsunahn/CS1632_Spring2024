@@ -1,0 +1,6 @@
+# Target class main method to run.  In this case, we are invoking the main method of DrunkCarnivalShooterImpl with the argument "test".
+target = edu.pitt.cs.DrunkCarnivalShooterImpl
+target.args = test
+
+# Do a BFS (Breadth First Search) of the state space.  The other option is DFSHeuristic (Depth First Search).
+search.class = .search.heuristic.BFSHeuristic

@@ -1,23 +1,22 @@
 - [Exercise 5 - Static Analysis Part 1: Linters and Bug Finders](#exercise-5---static-analysis-part-1-linters-and-bug-finders)
-  - [Description](#description)
-  - [DrunkCarnivalShooter](#drunkcarnivalshooter)
-  - [Apply SpotBugs and CheckStyle](#apply-spotbugs-and-checkstyle)
-    - [SpotBugs Report](#spotbugs-report)
-    - [CheckStyle Report](#checkstyle-report)
-  - [Try rerunning the application](#try-rerunning-the-application)
-  - [Lessons on Pattern Matching](#lessons-on-pattern-matching)
-  - [Submission](#submission)
-  - [Resources](#resources)
+  * [Description](#description)
+  * [DrunkCarnivalShooter](#drunkcarnivalshooter)
+  * [Apply SpotBugs and CheckStyle](#apply-spotbugs-and-checkstyle)
+    + [SpotBugs Report](#spotbugs-report)
+    + [CheckStyle Report](#checkstyle-report)
+  * [Try rerunning the application](#try-rerunning-the-application)
+  * [Lessons on Pattern Matching](#lessons-on-pattern-matching)
+  * [Submission](#submission)
+  * [Resources](#resources)
 - [Exercise 5 - Static Analysis Part 2: Model Checking](#exercise-5---static-analysis-part-2-model-checking)
-  - [Applying Java Pathfinder (JPF)](#applying-java-pathfinder-jpf)
-    - [Applying JPF on Rand](#applying-jpf-on-rand)
-    - [Applying JPF on DrunkCarnivalShooter](#applying-jpf-on-drunkcarnivalshooter)
-    - [Applying JPF on JUnit to Unit Test DrunkCarnivalShooter](#applying-jpf-on-junit-to-unit-test-drunkcarnivalshooter)
-    - [Obtaining a trace of a JUnit Failure from JPF](#obtaining-a-trace-of-a-junit-failure-from-jpf)
-    - [Lessons on Model Checking](#lessons-on-model-checking)
-  - [Submission](#submission-1)
-  - [GradeScope Feedback](#gradescope-feedback)
-  - [Resources](#resources-1)
+  * [Applying Java Pathfinder (JPF)](#applying-java-pathfinder-jpf)
+    + [Applying JPF on Rand](#applying-jpf-on-rand)
+    + [Applying JPF on DrunkCarnivalShooter](#applying-jpf-on-drunkcarnivalshooter)
+    + [Applying JPF on JUnit to Unit Test DrunkCarnivalShooter](#applying-jpf-on-junit-to-unit-test-drunkcarnivalshooter)
+    + [Lessons on Model Checking](#lessons-on-model-checking)
+  * [Submission](#submission-1)
+  * [GradeScope Feedback](#gradescope-feedback)
+  * [Resources](#resources-1)
 - [Groupwork Plan](#groupwork-plan)
 - [Exercise 5 - Static Analysis Extra Credit](#exercise-5---static-analysis-extra-credit)
 
@@ -320,19 +319,24 @@ which is the divide-by-zero exception on the calculation for "c".
 Using JPF, you can *always* deterministically find the defect using systematic
 state space exploration.
 
-To run JPF on Rand do (.bat for WIndows, .sh for Mac/Linux):
-
+To run JPF on Rand, first cd into the jpf-core folder:
 ```
-.\runJPF.bat Rand.jpf
-```
-```
-bash runJPF.sh Rand.jpf
+cd jpf-core
 ```
 
-If you see the following output, you are not using Java 8 to run JPF:
+Then do (runApp.bat for WIndows cmd shell, runApp.sh for Mac/Linux):
 
 ```
-$ java -ea -jar jpf-core/build/RunJPF.jar +site=./site.properties Rand.jpf
+.\runApp.bat Rand.jpf
+```
+```
+bash runApp.sh Rand.jpf
+```
+
+If you see the following output, you are not using Java 11 to run JPF:
+
+```
+$ java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -jar build/RunJPF.jar Rand.jpf 
 [SEVERE] JPF configuration error: error instantiating class gov.nasa.jpf.vm.OVHeap for entry "vm.heap.class":
 > exception in gov.nasa.jpf.vm.OVHeap(gov.nasa.jpf.Config,gov.nasa.jpf.vm.KernelState):
 >> java.lang.NoClassDefFoundError: sun/misc/SharedSecrets
@@ -345,7 +349,7 @@ Please check "java -version" again and retry after setting up.
 If you see the following output, JPF is running correctly:
 
 ```
-$ java -ea -jar jpf-core/build/RunJPF.jar +site=./site.properties Rand.jpf 
+$ java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -jar build/RunJPF.jar Rand.jpf
 JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
 
 
@@ -432,7 +436,7 @@ loaded code:        classes=66,methods=1371
 ====================================================== search finished: 3/15/24 1:52 PM
 ```
 
-Since you enabled both error and trace output on [Rand.jpf](Rand.jpf):
+Since you enabled both error and trace output on [jpf.properties](jpf-core/jpf.properties):
 
 ```
 report.console.property_violation=error,trace
@@ -486,10 +490,10 @@ on DrunkCarnivalShooter.  The following command applies JPF to the program.
 To run JPF on DrunkCarnivalShooter do (.bat for WIndows, .sh for Mac/Linux):
 
 ```
-.\runJPF.bat DrunkCarnivalShooter.jpf
+.\runApp.bat DrunkCarnivalShooter.jpf
 ```
 ```
-bash runJPF.sh DrunkCarnivalShooter.jpf
+bash runApp.sh DrunkCarnivalShooter.jpf
 ```
 
 But stop right there.  If you run that command, you will fall into an
@@ -566,10 +570,10 @@ mvn compile
 And try running JPF one more time:
 
 ```
-.\runJPF.bat DrunkCarnivalShooter.jpf
+.\runApp.bat DrunkCarnivalShooter.jpf
 ```
 ```
-bash runJPF.sh DrunkCarnivalShooter.jpf
+bash runApp.sh DrunkCarnivalShooter.jpf
 ```
 
 This will show a new error message due to an exception:
@@ -656,10 +660,10 @@ mvn compile
 Then one of the below:
 
 ```
-.\runJPF.bat DrunkCarnivalShooter.jpf
+.\runApp.bat DrunkCarnivalShooter.jpf
 ```
 ```
-bash runJPF.sh DrunkCarnivalShooter.jpf
+bash runApp.sh DrunkCarnivalShooter.jpf
 ```
 
 Press Ctrl+C now, or your process is going to run out of memory!  Since JPF does 
@@ -770,30 +774,48 @@ diretory.
 To run JPF on DrunkCarnivalShooterTest, do (.bat for WIndows, .sh for Mac/Linux):
 
 ```
-.\runJPF.bat JUnit.win.jpf
+.\runTest.bat edu.pitt.cs.DrunkCarnivalShooterTest
 ```
 ```
-bash runJPF.sh JUnit.macos.jpf
-```
-
-If you peek into JUnit.win.jpf (or JUnit.macos.jpf), you will notice that now
-the execution target is set to TestRunner instead of DrunkCarnivalShooter:
-
-```
-target = edu.pitt.cs.TestRunner
+bash runTest.sh edu.pitt.cs.DrunkCarnivalShooterTest
 ```
 
-TestRunner.java is a class I wrote that invokes the JUnitCore.runClasses API on
-our DrunkCarnivalShooterTest.java JUnit class.  The returned Result object can
-be probed to enumerate failures.
+As of now, it should show one test method "testShoot" passing:
 
-Now let's focus our attention on DrunkCarnivalShooterTest.java itself. As is, it is
-incomplete and does not do much.  Fill in the
-locations with // TODO comments inside DrunkCarnivalShooterTest.java.  In the
-setUp method, use the Verify API such that you enumerate all the 16 possible
-states that the game can be in, as well as the target choice made by the user
-(0-3).  In this way, each of your JUnit test cases will be tested on all
-possible states the game can be in with all possible user inputs.
+```
+$ java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -jar build/RunTest.jar edu.pitt.cs.DrunkCarnivalShooterTest
+
+......................................... testing testShoot()
+  running jpf with args:
+JavaPathfinder core system v8.0 (rev 1a704e1d6c3d92178504f8cdfe57b068b4e22d9c) - (C) 2005-2014 United States Government. All rights reserved.
+
+
+====================================================== system under test
+edu.pitt.cs.DrunkCarnivalShooterTest.runTestMethod()
+
+====================================================== search started: 3/19/24, 1:34 AM
+[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.getUnsafe()Lsun/misc/Unsafe;
+Failure in Round #0:                         (targetChoice=0):
+
+====================================================== results
+no errors detected
+
+====================================================== search finished: 3/19/24, 1:34 AM
+......................................... testShoot: Ok
+
+......................................... execution of testsuite: edu.pitt.cs.DrunkCarnivalShooterTest SUCCEEDED
+.... [1] testShoot: Ok
+......................................... tests: 1, failures: 0, errors: 0
+
+tested classes: 1, passed: 1
+```
+
+As of now, DrunkCarnivalShooterTest.java is incomplete and does not do much.
+Fill in the locations with // TODO comments inside.  In the setUp method, use
+the Verify API such that you enumerate all the 16 possible states that the game
+can be in, as well as the target choice made by the user (0-3).  In this way,
+each of your JUnit test cases will be tested on all possible states the game
+can be in with all possible user inputs.
 
 In the testShoot() method, implement the preconditions, execution steps, and
 the invariant to test the shoot(targetChoice, builder) method as explained in
@@ -814,93 +836,41 @@ The failString tells you the combination of game state and target choice that
 led to the failure, which helps you debug the problem.  Feel free to append
 additional information to the failString that may help you debug.
 
-If you implemented the test properly, you should see a long list of errors for
-different combinations:
+Now, try running the JUnit test again on top of JPF:
 
 ```
-$ bash runJPF.sh JUnit.macos.jpf 
-JavaPathfinder core system v8.0 (rev 471fa3b7c6a9df330160844e6c2e4ebb4bf06b6c) - (C) 2005-2014 United States Government. All rights reserved.
+.\runTest.bat edu.pitt.cs.DrunkCarnivalShooterTest
+```
+```
+bash runTest.sh edu.pitt.cs.DrunkCarnivalShooterTest
+```
+
+If you implemented the test properly, it should produce an assertion failure
+and the trace leading up to it:
+
+```
+$ java --add-opens java.base/jdk.internal.misc=ALL-UNNAMED -jar build/RunTest.jar edu.pitt.cs.DrunkCarnivalShooterTest
+
+......................................... testing testShoot()
+  running jpf with args:
+JavaPathfinder core system v8.0 (rev 1a704e1d6c3d92178504f8cdfe57b068b4e22d9c) - (C) 2005-2014 United States Government. All rights reserved.
 
 
 ====================================================== system under test
-TestRunner.main()
+edu.pitt.cs.DrunkCarnivalShooterTest.runTestMethod()
 
-====================================================== search started: 3/15/24 6:41 PM
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||               (targetChoice=0): expected:<0> but was:<-1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||          ||   (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||         (targetChoice=0): expected:<1> but was:<0>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:        ||    ||    ||   (targetChoice=0): expected:<2> but was:<1>
-testShoot(DrunkCarnivalShooterTest): Failure in Round #0:  ||                     (targetChoice=0): expected:<0> but was:<-1>
-...
-
-====================================================== results
-no errors detected
-
-====================================================== statistics
-elapsed time:       00:00:01
-states:             new=156,visited=161,backtracked=317,end=192
-search:             maxDepth=7,constraints=0
-choice generators:  thread=1 (signal=0,lock=1,sharedRef=0,threadApi=0,reschedule=0), data=125
-heap:               new=20683,released=37388,maxLive=1649,gcCycles=317
-instructions:       473440
-max memory:         155MB
-loaded code:        classes=284,methods=4039
-
-====================================================== search finished: 3/15/24 6:41 PM
-
-```
-
-Each line in the "search" section is a JUnit test failure recorded for a particular path explored by JPF.
-In this case, each path corresponds to a configuration of targets and the target choice.
-
-### Obtaining a trace of a JUnit Failure from JPF
-
-You will notice that in the above output, the "results" section reports
-"no errors detected".  And since no errors were detected, no traces were collected.
-Why did this happen?  The JUnit framework has a habit of catching all exceptions thrown
-by your tested method or assertions resulting in test failures, so that it can aggregate them and report
-them later.  If it did not catch exceptions, the JUnit framework would have to stop at
-the very first failure!  This behavior prevents exceptions from being thrown 
-directly at JPF, and JPF needs exceptions thrown at it to know when failures
-occurred and be able to generate traces for those failures.
-
-In order to obtain a trace, uncomment the following line from JUnit.win.jpf, or JUnit.macos.jpf if you are Mac/Linux:
-
-```
-#Main method arguments.  Enable if you want to obtain a trace of a JUnit faiure.
-#target.args = trace
-```
-
-So that the argument "trace" is passed to TestRunner.java.
-
-In that case, TestRunner "emulates" what the JUnit framework would do on the DrunkCarnivalShooterTest
-class, rather than invoke JUnitCore.  It does this by using Java reflection to search for @Before, @Test, and @After methods,
-and invoking them in the order JUnit would have.
-The important thing is, in this emulation mode, TestRunner does not
-catch any exceptions, so any test failure (in fact the very first failure) will
-result in an exception and a trace in JPF.
-
-The output of runJPF.bat or runJPF.sh after making the above change would look like:
-
-```
-.\runJPF.bat .\JUnit.win.jpf
-
-D:\github\cs1632\CS1632_Spring2024\exercises\5>java -ea -jar jpf-core/build/RunJPF.jar +site=./site.properties .\JUnit.win.jpf 
-JavaPathfinder core system v8.0 (rev 2f8f3c4dc847b8945fc13d2cb60896fc9c34265b) - (C) 2005-2014 United States Government. All rights reserved.
-
-
-====================================================== system under test
-edu.pitt.cs.TestRunner.main("trace")
-
-====================================================== search started: 3/15/24 6:58 PM
-TRACE GENERATION FOR FIRST FAILURE
-
+====================================================== search started: 3/19/24, 2:08 AM
+[WARNING] orphan NativePeer method: jdk.internal.misc.Unsafe.getUnsafe()Lsun/misc/Unsafe;
 
 ====================================================== error 1
 gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
-java.lang.reflect.InvocationTargetException: java.lang.AssertionError
-        at org.junit.Assert.fail(org/junit/Assert.java:88)
-        ...
+java.lang.AssertionError: Failure in Round #0:        ||               (targetChoice=0):
+        at gov.nasa.jpf.util.test.TestJPF.fail(gov/nasa/jpf/util/test/TestJPF.java:164)
+        at gov.nasa.jpf.util.test.TestJPF.assertEquals(gov/nasa/jpf/util/test/TestJPF.java:1054)
+        at edu.pitt.cs.DrunkCarnivalShooterTest.testShoot(edu/pitt/cs/DrunkCarnivalShooterTest.java:126)
+        at java.lang.reflect.Method.invoke(gov.nasa.jpf.vm.JPF_java_lang_reflect_Method)
+        at gov.nasa.jpf.util.test.TestJPF.runTestMethod(gov/nasa/jpf/util/test/TestJPF.java:648)
+
 
 ====================================================== trace #1
 ------------------------------------------------------ transition #0 thread: 0
@@ -933,8 +903,31 @@ edu/pitt/cs/DrunkCarnivalShooterImpl.java:95 : remainingTargetNum--;
 edu/pitt/cs/DrunkCarnivalShooterTest.java:112 : assertEquals(failString, standing, shooter.getRemainingTargetNum());
 
 ====================================================== results
-error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.reflect.InvocationTargetException: java...."
-...
+error #1: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty "java.lang.AssertionError: Failure in Round #0:    ..."
+
+====================================================== search finished: 3/19/24, 2:08 AM
+java.lang.AssertionError: JPF found unexpected errors: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+        at gov.nasa.jpf.util.test.TestJPF.fail(TestJPF.java:164)
+        at gov.nasa.jpf.util.test.TestJPF.noPropertyViolation(TestJPF.java:816)
+        at gov.nasa.jpf.util.test.TestJPF.verifyNoPropertyViolation(TestJPF.java:830)
+        at edu.pitt.cs.DrunkCarnivalShooterTest.testShoot(DrunkCarnivalShooterTest.java:79)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at gov.nasa.jpf.util.test.TestJPF.invoke(TestJPF.java:499)
+        at gov.nasa.jpf.util.test.TestJPF.runTests(TestJPF.java:558)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+        at gov.nasa.jpf.tool.RunTest.main(RunTest.java:185)
+......................................... test method failed with: JPF found unexpected errors: gov.nasa.jpf.vm.NoUncaughtExceptionsProperty
+......................................... testShoot: Failed
+
+......................................... execution of testsuite: edu.pitt.cs.DrunkCarnivalShooterTest FAILED
+.... [1] testShoot: Failed
+......................................... tests: 1, failures: 1, errors: 0
 ```
 
 Through this trace you can see what choices were made on this path,
@@ -967,6 +960,7 @@ deductions.
 ## GradeScope Feedback
 
 The GradeScope autograder works in 2 phases:
+
 1. DrunkCarnivalShooterTest on DrunkCarnivalShooterImpl
 
    This runs your DrunkCarnivalShooterTest JUnit test on your
@@ -984,44 +978,36 @@ failures.
 If you have trouble, try comparing your JPF outputs against these expected
 outputs:
 
-* Result of running DrunkCarnivalShooterImpl standalone on top of JPF:
-  ```
-  runJPF.bat DrunkCarnivalShooter.win.jpf
-  ```
-  OR
-  ```
-  bash runJPF.sh DrunkCarnivalShooter.macos.jpf
-  ```
-  Expected output: [jpf_drunkcarnivalshooter_run.txt](jpf_drunkcarnivalshooter_run.txt)
+1. Result of running DrunkCarnivalShooterTest on DrunkCarnivalShooterImpl. Corresponds to the autograder phase 1 output:
+   ```
+   .\runTest.bat edu.pitt.cs.DrunkCarnivalShooterTest
+   ```
+   OR
+   ```
+   bash runTest.sh edu.pitt.cs.DrunkCarnivalShooterTest
+   ```
+   Expected output: [jpf_junit_run.txt](jpf_junit_run.txt).  
 
-* Result of running DrunkCarnivalShooterTest on DrunkCarnivalShooterImpl on top of JPF. Corresponds to the autograder phase 1 output:
-  ```
-  runJPF.bat JUnit.win.jpf
-  ```
-  OR
-  ```
-  bash runJPF.sh JUnit.macos.jpf
-  ```
-  Expected output: [jpf_junit_run.txt](jpf_junit_run.txt).  
+1. Result of running DrunkCarnivalShooterTest on DrunkCarnivalShooterBuggy. Corresponds to the autograder phase 2 output.
+   First, insert the following line at the beginning of your setUp() method in DrunkCarnivalShooterTest.java:
+   ```
+   Config.setBuggy(true);
+   ```
 
-* Result of running DrunkCarnivalShooterTest on DrunkCarnivalShooterBuggy on top of JPF. Corresponds to the autograder phase 2 output.  First uncomment "target.args = buggy" in JUnit.win.jpf or JUnit.macos.jpf, depending on your OS.  Then run:
-  ```
-  runJPF.bat JUnit.win.jpf
-  ```
-  OR
-  ```
-  bash runJPF.sh JUnit.macos.jpf
-  ```
-  Expected output: [jpf_junit_buggy_run.txt](jpf_junit_buggy_run.txt).
-  
+   Then, run the JUnit test again:
+   ```
+   .\runTest.bat edu.pitt.cs.DrunkCarnivalShooterTest
+   ```
+   OR
+   ```
+   bash runTest.sh edu.pitt.cs.DrunkCarnivalShooterTest
+   ```
+   Expected output: [jpf_junit_buggy_run.txt](jpf_junit_buggy_run.txt).
+   
 Minor details like elapsed time statistics can differ but the search output and
-the results output should look the same.  Also, note that now the former goes
-up to Round #4 and covers all possible 16 target configurations.
+the results output should look mostly similar.  
 
 ## Resources
-
-* JDK 8 installation packages:  
-https://drive.google.com/drive/folders/1E76H7y2nMsrdiBwJi0nwlzczAgTKKhv7
 
 * Java Path Finder manual:  
 https://github.com/javapathfinder/jpf-core/wiki/How-to-use-JPF

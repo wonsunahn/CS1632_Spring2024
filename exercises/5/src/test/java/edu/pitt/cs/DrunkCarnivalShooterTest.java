@@ -5,25 +5,26 @@ import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import gov.nasa.jpf.util.test.TestJPF;
+
 /**
  * Code by @author Wonsun Ahn
  * 
- * <p>Uses the Java Path Finder model checking tool to check DrunkCarnivalShooter
+ * <p>
+ * Uses the Java Path Finder model checking tool to check DrunkCarnivalShooter
  * shoot method for all scenarios. It enumerates all possible states of the
  * targets as well as all possible target choices by the user.
  */
 
-public class DrunkCarnivalShooterTest {
+public class DrunkCarnivalShooterTest extends TestJPF {
 	private DrunkCarnivalShooter shooter; // The game object
+	private StringBuilder builder; // The string builder object
 	private boolean[] targets;
-	private String failString; // A descriptive fail string for assertions
-
 	private int targetChoice; // The user inputed target choice to test (can be between 0 - 3)
 
 	/**
 	 * Sets up the test fixture.
 	 */
-	@Before
 	public void setUp() {
 		targets = new boolean[4];
 		/*
@@ -34,7 +35,7 @@ public class DrunkCarnivalShooterTest {
 		 * Verify API, look at:
 		 * https://github.com/javapathfinder/jpf-core/wiki/Verify-API-of-JPF
 		 */
-
+		
 		// Create the game
 		shooter = DrunkCarnivalShooter.createInstance();
 		// Set up the targets in the game to reflect the targets array
@@ -44,18 +45,8 @@ public class DrunkCarnivalShooterTest {
 			}
 		}
 
-		// A failstring useful to pass to assertions to get a more descriptive error.
-		failString = "Failure in " + shooter.getRoundString() + " (targetChoice=" + targetChoice + "):";
-	}
-
-	/**
-	 * Tears down the test fixture.
-	 */
-	@After
-	public void tearDown() {
-		shooter = null;
-		targetChoice = 0;
-		targets = null;
+		// Create the string builder
+		builder = new StringBuilder();
 	}
 
 	/**
@@ -72,7 +63,18 @@ public class DrunkCarnivalShooterTest {
 	 */
 	@Test
 	public void testShoot() {
-		// TODO: Implement
+		/*
+		 * When host JVM encounters the verifyNoPropertyViolation(), it invokes the JPF
+		 * VM on this test method. So there are effectively two virtual machines
+		 * executing this method. The verifyNoPropertyViolation() method returns false
+		 * if the executing VM is the host JVM and returns true if it is the JPF VM.
+		 */
+		if (verifyNoPropertyViolation() == false) {
+			// This is the host JVM so return immediately.
+			return;
+		}
+		// This is the JPF VM, so run the test case on top of it, starting from the setUp().
+		setUp();
 
 		/*
 		 * Currently, it just prints out the failString to demonstrate to you all the
@@ -93,8 +95,13 @@ public class DrunkCarnivalShooterTest {
 		 * Failure in Round #0:  ||    ||    ||         (targetChoice=3):
 		 * Failure in Round #0:  ||    ||    ||    ||   (targetChoice=3):
 		 * 
-		 * PLEASE COMMENT OUT when you are done implementing.
+		 * Comment out the println when you are done implementing.
 		 */
+
+		// A failstring useful to pass to assertions to get a more descriptive error.
+		String failString = "Failure in " + shooter.getRoundString() + " (targetChoice=" + targetChoice + "):";
 		System.out.println(failString);
+		
+		// TODO: Implement
 	}
 }
