@@ -26,7 +26,7 @@ Spring Semester 2024 - Exercise 5
 
 * DUE: March 24 (Sunday), 2024 11:59 PM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/4wJoAufz
 
 ## Description
 
