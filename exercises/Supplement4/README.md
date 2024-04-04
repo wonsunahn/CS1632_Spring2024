@@ -903,10 +903,10 @@ Create a Dockerfile at the root of your repository with the following content:
 
 ```
 # specify base image
-FROM openjdk:8-jdk-alpine
+FROM adoptopenjdk/openjdk11:slim
 
 # install Maven on top of base image
-RUN apk update && apk add maven
+RUN apt-get update && apt-get install -y --no-install-recommends maven
 
 # define working directory
 WORKDIR /app
@@ -922,15 +922,14 @@ EXPOSE 8080
 CMD ["/bin/sh", "-c", "mvn spring-boot:run"]
 ```
 
-The description of the base image openjdk:8-jdk-alpine can be found here:
-https://hub.docker.com/layers/library/openjdk/8-jdk-alpine/images/sha256-a3562aa0b991a80cfe8172847c8be6dbf6e46340b759c2b782f8b8be45342717?context=explore
+The description of the base image adoptopenjdk/openjdk11:ubi can be found here:
 
-You can see that the image size is only 70 MB, and most of it is due to the
-OpenJDK 8 installation.  With the size of apps today, 70 MB is not a big
-price to pay for reliable testing and deployment.
+https://hub.docker.com/r/adoptopenjdk/openjdk11
 
 Base images of all imaginable OS versions and with all widely used packages
-can be found at Docker Hub (https://hub.docker.com/search).
+can be found at Docker Hub:
+
+https://hub.docker.com/search
 
 For our image, we add the Maven build system and copy over files required to
 launch our web app.  We also expose TCP port 8080 to the outside world since
@@ -1067,15 +1066,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up JDK 8
+      - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
-          java-version: '8'
+          java-version: '11'
           distribution: 'temurin'
           cache: maven
 
       - name: Setup Docker buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       - name: Install Chrome Web Browser
         run: sudo apt-get -y install google-chrome-stable
@@ -1228,7 +1227,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Setup Docker buildx
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
       # Login against a Docker registry
       # https://github.com/docker/login-action
@@ -1264,11 +1263,14 @@ jobs:
 
 The workflow publishes the web server Docker image to ghcr.io (the GitHub
 Docker image registery).  The docker/build-push-action@v3 GitHub action does
-all the heavy lifting.  Once this workflow is pushed, trigger it manually
-using the "Run workflow" button.  After it completes, go to the "<> Code"
-tab and you should see a new package in the Packages section on the bottom
-right.  If you click on the package link, you should see something like the
-below:
+all the heavy lifting.
+
+Once this workflow is committed and pushed, trigger it by creating a new
+release on the "<> Code" tab.  Add a tag by clicking on the "Choose a tag" drop
+down, such as "v1.2" (since that is the version number in the pom.xml file).
+After the worflow completes, go to the "<> Code" tab and you should see a new
+package in the Packages section on the bottom right.  If you click on the
+package link, you should see something like the below:
 
 <img alt="Published Docker package" src=img/docker_publish.png>
 
@@ -1302,11 +1304,10 @@ Next, copy the "Install from the command line" text from your GitHub package
 page, which was in my case:
 
 ```
-docker pull ghcr.io/cs1632/supplementary-exercise-4-ci-cd-dockers-wonsunahn:main
+docker pull ghcr.io/cs1632-spring2024/supplementary-exercise-4-ci-cd-dockers-wonsunahn:main
 ```
 
-After replacing "supplementary-exercise-4-ci-cd-dockers-wonsunahn" with the name
-of your repository, run it on the terminal.  This will pull the published image
+Then your commandline on the terminal.  This will pull the published image
 on to your Docker Desktop.  If you check the "Images" menu, you will see a new
 image created:
 
