@@ -122,12 +122,24 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 ## WEEK 14 (Week of 8 APR)
 
 * April 9, 1:00 - 2:15 PM: Thermo-Fisher Lecture
+  * Speaker: **Rob Campbell**, Manager, Software & Systems Quality Assurance (QA), [LinkedIn](https://www.linkedin.com/in/rob-campbell-b84760a1/)
+  * Speaker: **Janine Medina**, Senior Strategist, Regulatory and Quality Product Cybersecurity, [LinkedIn](https://www.linkedin.com/in/janineamedina/)
+  * Speaker: **Ganesh Muralidharan**
+  * Speaker: **Aravind Tummala**
 
 * April 11, 1:00 - 2:15 PM: UPMC Lecture
-
+  * Speaker: **Heather Petronic**, Sr. Manager, IT Engineering, [LinkedIn](https://www.linkedin.com/in/heather-petronic-5412ab7a/)
+  * Speaker: **Erin Kopp**, System Analyst - Technical Lead, [LinkedIn](https://www.linkedin.com/in/erin-kopp-158a283/)
+  * Speaker: **Olga Shuleika**, Intermediate Software Engineer, [LinkedIn](https://www.linkedin.com/in/olga-shuleika-4a91b5a7/)
+    
 * April 9, 4:00 - 5:15 PM: Deloitte Lecture
+  * Speaker: **Donovan Wiggins**, DC Specialist Master (Test Automation) at Deloitte, [LinkedIn](https://www.linkedin.com/in/donovan-e-wiggins-jr-pmp-icp-csm-19786037/)
 
 * April 11, 4:00 - 5:15 PM: Sheetz Lecture
+  * Speaker: **Jay Rhykerd**, Chief Information Security Officer (CISO), [LinkedIn](https://www.linkedin.com/in/jasonrhykerd/)
+  * Speaker: **Tyler Smith**, Application Security Lead, [LinkedIn](https://www.linkedin.com/in/tyler-smith-9b4b57167/)
+
+* All lectures happening in our classroom at IS 305. You are required to attend lectures for your section (attendance will be taken).  You are also welcome to attend lectures for the other section as there is plenty of room.
 
 ## WEEK 15 (Week of 15 APR)
 
