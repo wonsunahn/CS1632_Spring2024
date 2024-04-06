@@ -127,14 +127,14 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
   * Speaker: **Ganesh Muralidharan**
   * Speaker: **Aravind Tummala**
 
+* April 9, 4:00 - 5:15 PM: Deloitte Lecture
+  * Speaker: **Donovan Wiggins**, DC Specialist Master (Test Automation) at Deloitte, [LinkedIn](https://www.linkedin.com/in/donovan-e-wiggins-jr-pmp-icp-csm-19786037/)
+
 * April 11, 1:00 - 2:15 PM: UPMC Lecture
   * Speaker: **Heather Petronic**, Sr. Manager, IT Engineering, [LinkedIn](https://www.linkedin.com/in/heather-petronic-5412ab7a/)
   * Speaker: **Erin Kopp**, System Analyst - Technical Lead, [LinkedIn](https://www.linkedin.com/in/erin-kopp-158a283/)
   * Speaker: **Olga Shuleika**, Intermediate Software Engineer, [LinkedIn](https://www.linkedin.com/in/olga-shuleika-4a91b5a7/)
     
-* April 9, 4:00 - 5:15 PM: Deloitte Lecture
-  * Speaker: **Donovan Wiggins**, DC Specialist Master (Test Automation) at Deloitte, [LinkedIn](https://www.linkedin.com/in/donovan-e-wiggins-jr-pmp-icp-csm-19786037/)
-
 * April 11, 4:00 - 5:15 PM: Sheetz Lecture
   * Speaker: **Jay Rhykerd**, Chief Information Security Officer (CISO), [LinkedIn](https://www.linkedin.com/in/jasonrhykerd/)
   * Speaker: **Tyler Smith**, Application Security Lead, [LinkedIn](https://www.linkedin.com/in/tyler-smith-9b4b57167/)
