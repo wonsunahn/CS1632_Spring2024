@@ -750,19 +750,25 @@ an analysis method.  Click on the "With GitHub Actions" link:
 
 
 Choose Maven for your build framework and follow the instructions that are
-displayed.  When you modify the pom.xml file with additional properties for
+displayed.  A few things you need to look out for while following the
+instructions.
+
+1. Please do add the SONAR_TOKEN that SonarCloud has generated for your project
+to GitHub secrets as instructed to allow your workflow to authenticate against
+SonarCloud.  ```
+
+1. When you modify the pom.xml file with additional properties for
 SonarCould, note that there already is a properties section so don't add a
 new section.  Just add the additional properties to the existing section.
 
-Also, it is going to ask you add a new build.yml file to your workflows.  We
+1. It is going to ask you add a new build.yml file to your workflows.  We
 want this job to run as part of our maven-ci.yml CI test, so instead of
 creating a new file, just add the "build" job to the end of the jobs list in
 maven-ci.yml.  
 
-Also, in maven-ci.yml, make the following changes to the "build" job:
-
-1. Replace the checkout action with the cache action like we did for the
-   "update_dependency_graph" job:
+1. In the "build" job in maven-ci.yml that you just added, make the following
+changes.  Replace the checkout action with the cache action like we did for the
+"update_dependency_graph" job:
 
    ```
    - name: Restore cached build
@@ -772,8 +778,9 @@ Also, in maven-ci.yml, make the following changes to the "build" job:
        path: .
    ```
 
-2. Also order the "build" job after the "maven_test" job so that the cache
-   is available by the time it runs:
+   Also order the "build" job after the "maven_test" job so that the cache is
+available by the time it runs:
+
    ```
    needs: [maven_test]  # Enforces that maven_test runs first
    ```
