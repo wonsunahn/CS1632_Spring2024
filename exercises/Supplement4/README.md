@@ -755,7 +755,7 @@ instructions.
 
 1. Please do add the SONAR_TOKEN that SonarCloud has generated for your project
 to GitHub secrets as instructed to allow your workflow to authenticate against
-SonarCloud.  ```
+SonarCloud.
 
 1. When you modify the pom.xml file with additional properties for
 SonarCould, note that there already is a properties section so don't add a
