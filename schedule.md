@@ -124,8 +124,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 * April 9, 1:00 - 2:15 PM: Thermo-Fisher Lecture
   * Speaker: **Rob Campbell**, Manager, Software & Systems Quality Assurance (QA), [LinkedIn](https://www.linkedin.com/in/rob-campbell-b84760a1/)
   * Speaker: **Janine Medina**, Senior Strategist, Regulatory and Quality Product Cybersecurity, [LinkedIn](https://www.linkedin.com/in/janineamedina/)
+  * Speaker: **Aravind Tummala**, Manager, Software Security
   * Speaker: **Ganesh Muralidharan**
-  * Speaker: **Aravind Tummala**
 
 * April 9, 4:00 - 5:15 PM: Deloitte Lecture
   * Speaker: **Donovan Wiggins**, DC Specialist Master (Test Automation) at Deloitte, [LinkedIn](https://www.linkedin.com/in/donovan-e-wiggins-jr-pmp-icp-csm-19786037/)
