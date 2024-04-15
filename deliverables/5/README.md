@@ -381,8 +381,8 @@ method to do one or the other as instructed in the comment.
 Again, please use InstanceType.SOLUTION and InstanceType.BUGGY in
 BeanCounterLogic.createInstance and Bean.createInstance to verify your testing
 against the solution and buggy versions.  Also, inside testMain(), instead of
-calling BeanCounterLogicImpl(String[]), please call
-BeanCounterLogicSolution(String[]) or BeanCounterLogicBuggy(String[]), to test
+calling BeanCounterLogicImpl.main(String[]), please call
+BeanCounterLogicSolution.main(String[]) or BeanCounterLogicBuggy.main(String[]), to test
 the respective versions.  If you test against the buggy version, all tests
 should fail with the exception of testReset().
 
