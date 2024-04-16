@@ -145,6 +145,13 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
 * Class 1: Midterm 2 review
 
 * Class 2: Midterm 2 on GradeScope
+  * Steps:
+    1. Do TopHat attendance at start of class.  If no attendance, grade will not be counted.
+    2. Click on assignment "Midterm 2" on GradeScope (will appear at start of class).
+    3. Click on the "Start Assignment" button.  There will be a count down timer on the top right once you start.
+    4. Finish and submit the exam within 75 minutes.  You can submit multiple times.
+  * Exam is open book (Lecture slides, notes, textbook, all exercises and deliverables you completed, use of JRE or VSCode to test your submission).
+  * Exam is individual work.
   
 ## WEEK 16 (Week of 22 APR)
 
